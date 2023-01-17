@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/trksylnSign.pfx
+/obj
+/.vs
+/trksyln.pfx
+/bin/Debug
+/bin/Release
+*.user
