@@ -142,6 +142,9 @@
   <data name="clone_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\clone_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="min_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\min_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="stop_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\stop_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -178,17 +181,26 @@
   <data name="save_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\save_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="buymecoffee" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buymecoffee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="import_sc_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\import_sc_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="lock_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lock_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="buymecoffeCup" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buymecoffeCup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="edit_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\edit_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="import_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\import_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="settings_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settings_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="playing_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\playing_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,9 +223,6 @@
   <data name="close_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="settings_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settings_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="paused_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\paused_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -226,7 +235,7 @@
   <data name="up_arrow_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\up_arrow_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="min_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\min_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="language_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\language_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

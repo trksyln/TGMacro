@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Diagnostics;
+using System.Windows.Forms;
 
 namespace TGMacro
 {
@@ -13,8 +14,8 @@ namespace TGMacro
         private void FrmAbout_Shown(object sender, System.EventArgs ee)
         {
             TopMost = Statics.AppSession.TopMost;
+            button1.Click += (s, e) => Process.Start("https://www.buymeacoffee.com/trksyln");
             label1.Text = label1.Text.Replace("{0}", Statics.AppSession.Version);
-            label3.Text = label3.Text.Replace("{0}", Statics.AppSession.BuildNumber.ToString());
             btnClose.Click += (s, e) => Close();
             lblTitle.MouseDown += (s, e) =>
             {
@@ -33,5 +34,6 @@ namespace TGMacro
                 }
             };
         }
+
     }
 }

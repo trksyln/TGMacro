@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
+using TGMacro.Bases;
 
 namespace TGMacro.Statics
 {
     public static class AppSession
     {
         public static event EventHandler LanguageChanged;
-        public static Interfaces.ILanguage _activeLanguage;
-        public static Interfaces.ILanguage ActiveLanguage { get => _activeLanguage; set { _activeLanguage = value; LanguageChanged?.Invoke(null, null); } }
+        public static List<LanguageBase> Languages = new List<LanguageBase>();
+        public static LanguageBase _activeLanguage;
+        public static LanguageBase ActiveLanguage { get => _activeLanguage; set { _activeLanguage = value; LanguageChanged?.Invoke(null, null); } }
 
         private static bool _enable = false;
 

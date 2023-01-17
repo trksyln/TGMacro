@@ -446,7 +446,7 @@ namespace TGMacro
             this.lblTitle.MinimumSize = new System.Drawing.Size(0, 30);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.lblTitle.Size = new System.Drawing.Size(91, 30);
+            this.lblTitle.Size = new System.Drawing.Size(90, 30);
             this.lblTitle.TabIndex = 6;
             this.lblTitle.Text = "Action Editor";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

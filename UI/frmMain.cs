@@ -2,9 +2,13 @@
 using CSInputs.Structs;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Runtime.Serialization.Json;
+using System.Web.Script.Serialization;
 using System.Windows.Forms;
+using TGMacro.Bases;
 using TGMacro.ProjectData;
 
 namespace TGMacro
@@ -22,11 +26,6 @@ namespace TGMacro
 
         private void LoadLanguage()
         {
-            btnLanguage.BackgroundImage =
-                Statics.AppSession.ActiveLanguage.GetType() == typeof(Langs.tr) ?
-                Properties.Resources.turkish_16 :
-                Properties.Resources.english_16;
-
             btnFile.Text = Statics.AppSession.ActiveLanguage.btnFile;
             lblNoMacroMessage.Text = Statics.AppSession.ActiveLanguage.info_no_macro;
             btnHelp.Text = Statics.AppSession.ActiveLanguage.btnHelp;
@@ -38,28 +37,46 @@ namespace TGMacro
             btnLoadProject.Text = Statics.AppSession.ActiveLanguage.btnLoadProject;
             btnSaveProject.Text = Statics.AppSession.ActiveLanguage.btnSaveProject;
             btnUpdates.Text = Statics.AppSession.ActiveLanguage.btnUpdates;
-            toolTip1.SetToolTip(btnLanguage, Statics.AppSession.ActiveLanguage.btnChangeLanguage);
             toolTip1.SetToolTip(btnStatus, Statics.AppSession.ActiveLanguage.text_macro_status);
             toolTip1.SetToolTip(btnTopMost, Statics.AppSession.ActiveLanguage.btnTopMost);
+            toolTip1.SetToolTip(picLanguage, Statics.AppSession.ActiveLanguage.btnChangeLanguage);
+            toolTip1.SetToolTip(cmbLanguage, Statics.AppSession.ActiveLanguage.btnChangeLanguage);
+            toolTip1.SetToolTip(button1, "Buy me a coffee");
         }
         private void FrmMain_Shown(object sender, EventArgs e)
         {
-            if (System.Globalization.CultureInfo.CurrentCulture.ThreeLetterISOLanguageName.ToLower() == "tur")
+            // add embedded languages to languages dictionary
+            var tur = new Langs.TUR();
+            var eng = new Langs.ENG();
+            Statics.AppSession.Languages.Add(new Langs.TUR());
+            Statics.AppSession.Languages.Add(new Langs.ENG());
+
+            // import third party languages with distinct language names
+            ImportLanguages();
+
+            // add languages to ui
+            cmbLanguage.DataSource = Statics.AppSession.Languages;
+
+            // check if three letter system language name exist in languages
+            var systemLanguageMatch = Statics.AppSession.Languages.Where(t => t.language_name.ToLower() == System.Globalization.CultureInfo.CurrentCulture.ThreeLetterISOLanguageName.ToLower()).FirstOrDefault();
+            if (systemLanguageMatch != null)
             {
-                Statics.AppSession.ActiveLanguage = new Langs.tr();
+                cmbLanguage.SelectedIndex = cmbLanguage.FindString(systemLanguageMatch.language_name);
+                Statics.AppSession.ActiveLanguage = systemLanguageMatch;
             }
             else
             {
-                Statics.AppSession.ActiveLanguage = new Langs.en();
+                cmbLanguage.SelectedIndex = cmbLanguage.FindString("ENG");
+                Statics.AppSession.ActiveLanguage = eng;
             }
 
             Statics.AppSession.InputListener = new InputListener();
 
 
+            LoadLanguage();
             checkEnableButton();
             checkTopMostButton();
 
-            LoadLanguage();
             registerEvents();
 
             for (int i = 0; i < prjList.Length; i++)
@@ -69,11 +86,35 @@ namespace TGMacro
 
             Statics.AppSession.InputListener.KeyboardInputs += Hook_KeyboardInputs;
 
-            try
+        }
+
+        private void ImportLanguages()
+        {
+            if (!Directory.Exists("Langs"))
+                return;
+
+            var langFilePaths = Directory.GetFiles("Langs\\", "*.tglang");
+            if (langFilePaths.Count() < 1)
+                return;
+
+
+            var jsonSerializer = new JavaScriptSerializer();
+            for (int i = 0; i < langFilePaths.Length; i++)
             {
-                FileAssociation.AssociateThis();
+                try
+                {
+                    string json = File.ReadAllText(langFilePaths[i]);
+                    var newLang = jsonSerializer.Deserialize<LanguageBase>(json);
+                    if (Statics.AppSession.Languages.Where(t => t.language_name.ToUpper() == newLang.language_name.ToUpper()).Count() > 0
+                        || newLang.language_name.Length != 3)
+                        continue;
+                    Statics.AppSession.Languages.Add(newLang);
+                }
+                catch
+                {
+                    MessageBox.Show(langFilePaths[i] + " couldn't be added. Invalid file.", "Invalid language file");
+                }
             }
-            catch { }
         }
 
         private void Hook_KeyboardInputs(KeyboardData data, ref ModifierKey modifierKey)
@@ -115,6 +156,8 @@ namespace TGMacro
         {
             Statics.AppSession.LanguageChanged += (s, e) => LoadLanguage();
 
+            button1.Click += (s, e) => Process.Start("https://www.buymeacoffee.com/trksyln");
+
             btnFile.Click += (s, e) =>
             {
                 System.Drawing.Point location = PointToScreen(btnFile.Location);
@@ -137,19 +180,9 @@ namespace TGMacro
                 }
                 catch { }
             };
-            btnLanguage.Click += (s, e) =>
+            cmbLanguage.SelectedIndexChanged += (s, e) =>
             {
-                if (Statics.AppSession.ActiveLanguage.GetType() == typeof(Langs.en))
-                {
-                    Statics.AppSession.ActiveLanguage = new Langs.tr();
-                    btnLanguage.BackgroundImage = Properties.Resources.turkish_16;
-                }
-                else
-                {
-                    Statics.AppSession.ActiveLanguage = new Langs.en();
-                    btnLanguage.BackgroundImage = Properties.Resources.english_16;
-                }
-
+                Statics.AppSession.ActiveLanguage = (LanguageBase)cmbLanguage.SelectedItem;
             };
 
             btnClose.Click += (s, e) => Close();
@@ -389,12 +422,12 @@ namespace TGMacro
 
         private void SaveProjectFile(TGMacroProject obj, string path)
         {
-            if(File.Exists(path))
+            if (File.Exists(path))
                 try
                 {
                     File.Delete(path);
                 }
-                catch {}
+                catch { }
             DataContractJsonSerializer xs = new DataContractJsonSerializer(obj.GetType());
             using (FileStream tw = new FileStream(path, FileMode.OpenOrCreate))
             {

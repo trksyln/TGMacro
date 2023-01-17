@@ -102,8 +102,7 @@
     <DelaySign>false</DelaySign>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>
-    </AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>trksyln.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>Internet</TargetZone>
@@ -112,18 +111,19 @@
     <GenerateManifests>false</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>B9350EB64AFF2E5E14D7BD4B4FB0662F82E682B1</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>2724ACF9B3D5C03048D7B34004FC5CA53F72D31D</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>TGMacro_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>trksyln.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>false</SignManifests>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -146,7 +146,7 @@
     <Compile Include="Enums\TriggerKeyMethods.cs" />
     <Compile Include="Enums\TriggerRunState.cs" />
     <Compile Include="Enums\TriggerTypes.cs" />
-    <Compile Include="Interfaces\ILanguage.cs" />
+    <Compile Include="Bases\LanguageBase.cs" />
     <Compile Include="Interfaces\IMacroAction.cs" />
     <Compile Include="Bases\TriggerBase.cs" />
     <Compile Include="Langs\en.cs" />
@@ -158,7 +158,6 @@
     <Compile Include="Sys\ActionTable.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Sys\FileAssociation.cs" />
     <Compile Include="Sys\TGMacroProject.cs" />
     <Compile Include="Sys\RGB.cs" />
     <Compile Include="Sys\ScriptParser.cs" />
@@ -167,6 +166,9 @@
     <Compile Include="Triggers\EmptyTrigger.cs" />
     <Compile Include="Triggers\KeyboardTrigger.cs" />
     <Compile Include="Triggers\MouseTrigger.cs" />
+    <Compile Include="UI\DatagridDoubleBuffer.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UI\frmAbout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,6 +245,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="trksyln.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\about_16.png" />
@@ -330,6 +333,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ico.ico" />
+    <None Include="Resources\language_24.png" />
+    <None Include="Resources\buymecoffeCup.png" />
+    <None Include="Resources\buymecoffee.png" />
     <None Include="Resources\min_16.png" />
     <None Include="Resources\multi_16.png" />
     <None Include="Resources\update_16.png" />

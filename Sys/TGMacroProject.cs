@@ -1,10 +1,7 @@
 ﻿using System.Drawing;
-using System.Reflection;
 using System.Runtime.Serialization;
 using TGMacro.Bases;
 using TGMacro.Interfaces;
-
-[assembly: Obfuscation(Exclude = false, Feature = "namespace('TGMacro.ProjectData'):-rename")]
 
 namespace TGMacro.ProjectData
 {

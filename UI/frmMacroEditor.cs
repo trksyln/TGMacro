@@ -428,6 +428,19 @@ namespace TGMacro
         }
         private void RegisterEvents()
         {
+            dtActions.CellDoubleClick += (s, e) =>
+            {
+                Interfaces.IMacroAction act = (Interfaces.IMacroAction)actionTable.Rows[e.RowIndex][0];
+                frmActionEditor actEditor = new frmActionEditor(act);
+                if (actEditor.ShowDialog() == DialogResult.OK)
+                {
+                    actionTable.Rows[dtActions.SelectedRows[0].Index][0] = actEditor.Action;
+                    actionTable.Rows[dtActions.SelectedRows[0].Index][1] = actEditor.Action.Icon;
+                    actionTable.Rows[dtActions.SelectedRows[0].Index][2] = actEditor.Action.VisibleText;
+                    actionTable.Rows[dtActions.SelectedRows[0].Index][3] = actEditor.Action.VisibleValue;
+                }
+                dtActions.FirstDisplayedScrollingRowIndex = dtActions.SelectedRows[0].Index;
+            };
             btnAdjustTiming.Click += (s, e) =>
             {
                 AdjustTiming();

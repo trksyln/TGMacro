@@ -25,7 +25,7 @@ namespace TGMacro.Triggers
                 base.RunState = Enums.TriggerRunState.Stop;
                 return;
             }
-            bool defaultCon = (HasPrimary && Statics.SharedMethods.getPrimaryKeyStatus(PrimaryKey, modifierKey)) || !HasPrimary;
+            bool defaultCon = (HasPrimary && Statics.SharedMethods.getPrimaryKeyStatus(PrimaryKey, modifierKey) || !HasPrimary) && data.Key == SecondaryKey;
 
             if (defaultCon && Method == Enums.TriggerKeyMethods.Press && data.Flags == CSInputs.Enums.KeyFlags.Down)
             {

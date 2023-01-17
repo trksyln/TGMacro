@@ -21,9 +21,9 @@ namespace TGMacro
             Parent = parent;
             registerEvents();
 
-            toolTip1.SetToolTip(pnlEnable, "Enable/Disable Macro");
-            toolTip1.SetToolTip(btnEdit, "Edit Macro");
-            toolTip1.SetToolTip(btnDelete, "Delete Macro");
+            toolTip1.SetToolTip(pnlEnable, Statics.AppSession.ActiveLanguage.enable_disable_macro);
+            toolTip1.SetToolTip(btnEdit, Statics.AppSession.ActiveLanguage.edit_macro);
+            toolTip1.SetToolTip(btnDelete, Statics.AppSession.ActiveLanguage.macro_delete_title);
         }
 
         private void updateMacroStatus()
@@ -66,8 +66,9 @@ namespace TGMacro
             };
             btnDelete.Click += (s, e) =>
             {
-                if (MessageBox.Show(Macro.Name + " will be deleted?", "Macro delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                if (MessageBox.Show(Statics.AppSession.ActiveLanguage.btn_macro_delete.Replace("{macroname}", Macro.Name), Statics.AppSession.ActiveLanguage.macro_delete_title, MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
+                    ((FlowLayoutPanel)this.Parent).Controls.Remove(this);
                     macro.Trigger.Dispose();
                     macro.Dispose();
                     macro = null;

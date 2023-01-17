@@ -12,6 +12,7 @@ namespace TGMacro
         ///  The main entry point for the application.
         /// </summary>
         [STAThread]
+        [Obsolete]
         private static void Main(string[] args)
         {
             new Mutex(true, "trksyln-TMACRO", out bool createdNew);
@@ -20,7 +21,7 @@ namespace TGMacro
                 MessageBox.Show("Already running.", "Err");
                 return;
             }
-
+            AppDomain.CurrentDomain.AppendPrivatePath(@"Bin");
             List<string> prjList = new List<string>();
             for (int i = 0; i < args.Length; i++)
             {
@@ -29,6 +30,12 @@ namespace TGMacro
                 {
                     prjList.Add(fi.FullName);
                 }
+            }
+
+            if (!File.Exists("Bin\\CSInputs.dll"))
+            {
+                MessageBox.Show("\"CSInputs.dll\" could not be found in \"Bin\" folder.", "Err");
+                return;
             }
 
             Application.EnableVisualStyles();

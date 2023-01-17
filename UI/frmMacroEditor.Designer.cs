@@ -1,4 +1,6 @@
 ﻿
+using TGMacro.UI;
+
 namespace TGMacro
 {
     partial class frmMacroEditor
@@ -57,7 +59,7 @@ namespace TGMacro
             this.btnClear = new System.Windows.Forms.Button();
             this.btnImportScript = new System.Windows.Forms.Button();
             this.btnClone = new System.Windows.Forms.Button();
-            this.dtActions = new System.Windows.Forms.DataGridView();
+            this.dtActions = new DatagridDoubleBuffer();
             this.btnDeleteAction = new System.Windows.Forms.Button();
             this.btnEditAction = new System.Windows.Forms.Button();
             this.btnActionMoveUp = new System.Windows.Forms.Button();
@@ -578,7 +580,7 @@ namespace TGMacro
             this.lblTitle.MinimumSize = new System.Drawing.Size(0, 30);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.lblTitle.Size = new System.Drawing.Size(92, 30);
+            this.lblTitle.Size = new System.Drawing.Size(91, 30);
             this.lblTitle.TabIndex = 6;
             this.lblTitle.Text = "Macro Editor";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -788,7 +790,7 @@ namespace TGMacro
         private System.Windows.Forms.NumericUpDown mPosY;
         private System.Windows.Forms.NumericUpDown mPosX;
         private System.Windows.Forms.Label lblGrabInfo;
-        private System.Windows.Forms.DataGridView dtActions;
+        private DatagridDoubleBuffer dtActions;
         private System.Windows.Forms.Button btnAddAction;
         private System.Windows.Forms.Button btnEditAction;
         private System.Windows.Forms.Button btnDeleteAction;
