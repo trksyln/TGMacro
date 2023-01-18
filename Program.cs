@@ -21,6 +21,7 @@ namespace TGMacro
                 MessageBox.Show("Already running.", "Err");
                 return;
             }
+            Directory.SetCurrentDirectory(AppDomain.CurrentDomain.BaseDirectory);
             AppDomain.CurrentDomain.AppendPrivatePath(@"Bin");
             List<string> prjList = new List<string>();
             for (int i = 0; i < args.Length; i++)

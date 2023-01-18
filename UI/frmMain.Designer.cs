@@ -32,37 +32,37 @@ namespace TGMacro
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pnlGroup = new System.Windows.Forms.Panel();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnEnable = new System.Windows.Forms.Button();
             this.lblNoMacroMessage = new System.Windows.Forms.Label();
             this.pnlMacroList = new System.Windows.Forms.FlowLayoutPanel();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.cmbLanguage = new System.Windows.Forms.ComboBox();
-            this.btnHelp = new System.Windows.Forms.Button();
-            this.btnFile = new System.Windows.Forms.Button();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.ctHelpMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.ctFileMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.picLanguage = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.cmbLanguage = new System.Windows.Forms.ComboBox();
             this.btnStatus = new System.Windows.Forms.Button();
             this.btnTopMost = new System.Windows.Forms.Button();
             this.btnMin = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnEnable = new System.Windows.Forms.Button();
+            this.btnHelp = new System.Windows.Forms.Button();
+            this.btnFile = new System.Windows.Forms.Button();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.ctHelpMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnUpdates = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAbout = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctFileMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnLoadProject = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSaveProject = new System.Windows.Forms.ToolStripMenuItem();
             this.btnImportProject = new System.Windows.Forms.ToolStripMenuItem();
             this.btnImportScript = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pnlGroup.SuspendLayout();
             this.pnlMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLanguage)).BeginInit();
             this.ctHelpMenu.SuspendLayout();
             this.ctFileMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLanguage)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlGroup
@@ -76,6 +76,40 @@ namespace TGMacro
             this.pnlGroup.Padding = new System.Windows.Forms.Padding(10, 10, 10, 50);
             this.pnlGroup.Size = new System.Drawing.Size(464, 539);
             this.pnlGroup.TabIndex = 0;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Image = global::TGMacro.Properties.Resources.add_32;
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAdd.Location = new System.Drawing.Point(261, 487);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(193, 41);
+            this.btnAdd.TabIndex = 16;
+            this.btnAdd.Text = "Add New Macro";
+            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnAdd.UseVisualStyleBackColor = false;
+            // 
+            // btnEnable
+            // 
+            this.btnEnable.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnEnable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEnable.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
+            this.btnEnable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnable.Image = global::TGMacro.Properties.Resources.start_32;
+            this.btnEnable.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEnable.Location = new System.Drawing.Point(10, 487);
+            this.btnEnable.Name = "btnEnable";
+            this.btnEnable.Size = new System.Drawing.Size(193, 41);
+            this.btnEnable.TabIndex = 15;
+            this.btnEnable.Text = "Enable {HOME}";
+            this.btnEnable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEnable.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEnable.UseVisualStyleBackColor = false;
             // 
             // lblNoMacroMessage
             // 
@@ -139,6 +173,30 @@ namespace TGMacro
             this.pnlMain.Size = new System.Drawing.Size(464, 30);
             this.pnlMain.TabIndex = 6;
             // 
+            // picLanguage
+            // 
+            this.picLanguage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picLanguage.Image = global::TGMacro.Properties.Resources.language_24;
+            this.picLanguage.Location = new System.Drawing.Point(272, 3);
+            this.picLanguage.Name = "picLanguage";
+            this.picLanguage.Size = new System.Drawing.Size(24, 24);
+            this.picLanguage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLanguage.TabIndex = 19;
+            this.picLanguage.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::TGMacro.Properties.Resources.buymecoffeCup;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(165, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(24, 30);
+            this.button1.TabIndex = 18;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // cmbLanguage
             // 
             this.cmbLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -150,6 +208,55 @@ namespace TGMacro
             this.cmbLanguage.Name = "cmbLanguage";
             this.cmbLanguage.Size = new System.Drawing.Size(58, 25);
             this.cmbLanguage.TabIndex = 14;
+            // 
+            // btnStatus
+            // 
+            this.btnStatus.BackgroundImage = global::TGMacro.Properties.Resources.paused_16;
+            this.btnStatus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnStatus.FlatAppearance.BorderSize = 0;
+            this.btnStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStatus.Location = new System.Drawing.Point(366, 0);
+            this.btnStatus.Name = "btnStatus";
+            this.btnStatus.Size = new System.Drawing.Size(20, 30);
+            this.btnStatus.TabIndex = 11;
+            this.btnStatus.UseVisualStyleBackColor = true;
+            // 
+            // btnTopMost
+            // 
+            this.btnTopMost.BackgroundImage = global::TGMacro.Properties.Resources.unlock_16;
+            this.btnTopMost.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTopMost.FlatAppearance.BorderSize = 0;
+            this.btnTopMost.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTopMost.Location = new System.Drawing.Point(386, 0);
+            this.btnTopMost.Name = "btnTopMost";
+            this.btnTopMost.Size = new System.Drawing.Size(20, 30);
+            this.btnTopMost.TabIndex = 10;
+            this.btnTopMost.UseVisualStyleBackColor = true;
+            // 
+            // btnMin
+            // 
+            this.btnMin.BackgroundImage = global::TGMacro.Properties.Resources.min_16;
+            this.btnMin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMin.FlatAppearance.BorderSize = 0;
+            this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMin.Location = new System.Drawing.Point(410, 0);
+            this.btnMin.Name = "btnMin";
+            this.btnMin.Size = new System.Drawing.Size(20, 30);
+            this.btnMin.TabIndex = 13;
+            this.btnMin.UseVisualStyleBackColor = true;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackgroundImage = global::TGMacro.Properties.Resources.close_16;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(434, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(20, 30);
+            this.btnClose.TabIndex = 9;
+            this.btnClose.UseVisualStyleBackColor = true;
             // 
             // btnHelp
             // 
@@ -207,124 +314,6 @@ namespace TGMacro
             this.ctHelpMenu.Name = "ctFileMenu";
             this.ctHelpMenu.Size = new System.Drawing.Size(122, 56);
             // 
-            // ctFileMenu
-            // 
-            this.ctFileMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.ctFileMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnLoadProject,
-            this.btnSaveProject,
-            this.btnImportProject,
-            this.btnImportScript});
-            this.ctFileMenu.Name = "ctFileMenu";
-            this.ctFileMenu.Size = new System.Drawing.Size(155, 108);
-            // 
-            // picLanguage
-            // 
-            this.picLanguage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picLanguage.Image = global::TGMacro.Properties.Resources.language_24;
-            this.picLanguage.Location = new System.Drawing.Point(272, 3);
-            this.picLanguage.Name = "picLanguage";
-            this.picLanguage.Size = new System.Drawing.Size(24, 24);
-            this.picLanguage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLanguage.TabIndex = 19;
-            this.picLanguage.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::TGMacro.Properties.Resources.buymecoffeCup;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(165, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(24, 30);
-            this.button1.TabIndex = 18;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btnStatus
-            // 
-            this.btnStatus.BackgroundImage = global::TGMacro.Properties.Resources.paused_16;
-            this.btnStatus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnStatus.FlatAppearance.BorderSize = 0;
-            this.btnStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStatus.Location = new System.Drawing.Point(366, 0);
-            this.btnStatus.Name = "btnStatus";
-            this.btnStatus.Size = new System.Drawing.Size(20, 30);
-            this.btnStatus.TabIndex = 11;
-            this.btnStatus.UseVisualStyleBackColor = true;
-            // 
-            // btnTopMost
-            // 
-            this.btnTopMost.BackgroundImage = global::TGMacro.Properties.Resources.unlock_16;
-            this.btnTopMost.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnTopMost.FlatAppearance.BorderSize = 0;
-            this.btnTopMost.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTopMost.Location = new System.Drawing.Point(386, 0);
-            this.btnTopMost.Name = "btnTopMost";
-            this.btnTopMost.Size = new System.Drawing.Size(20, 30);
-            this.btnTopMost.TabIndex = 10;
-            this.btnTopMost.UseVisualStyleBackColor = true;
-            // 
-            // btnMin
-            // 
-            this.btnMin.BackgroundImage = global::TGMacro.Properties.Resources.min_16;
-            this.btnMin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMin.FlatAppearance.BorderSize = 0;
-            this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMin.Location = new System.Drawing.Point(410, 0);
-            this.btnMin.Name = "btnMin";
-            this.btnMin.Size = new System.Drawing.Size(20, 30);
-            this.btnMin.TabIndex = 13;
-            this.btnMin.UseVisualStyleBackColor = true;
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackgroundImage = global::TGMacro.Properties.Resources.close_16;
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(434, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(20, 30);
-            this.btnClose.TabIndex = 9;
-            this.btnClose.UseVisualStyleBackColor = true;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Image = global::TGMacro.Properties.Resources.add_32;
-            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAdd.Location = new System.Drawing.Point(261, 487);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(193, 41);
-            this.btnAdd.TabIndex = 16;
-            this.btnAdd.Text = "Add New Macro";
-            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnAdd.UseVisualStyleBackColor = false;
-            // 
-            // btnEnable
-            // 
-            this.btnEnable.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnEnable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEnable.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
-            this.btnEnable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnable.Image = global::TGMacro.Properties.Resources.start_32;
-            this.btnEnable.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEnable.Location = new System.Drawing.Point(10, 487);
-            this.btnEnable.Name = "btnEnable";
-            this.btnEnable.Size = new System.Drawing.Size(193, 41);
-            this.btnEnable.TabIndex = 15;
-            this.btnEnable.Text = "Enable {HOME}";
-            this.btnEnable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEnable.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEnable.UseVisualStyleBackColor = false;
-            // 
             // btnUpdates
             // 
             this.btnUpdates.Image = global::TGMacro.Properties.Resources.update_16;
@@ -338,6 +327,17 @@ namespace TGMacro
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Size = new System.Drawing.Size(121, 26);
             this.btnAbout.Text = "About";
+            // 
+            // ctFileMenu
+            // 
+            this.ctFileMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.ctFileMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnLoadProject,
+            this.btnSaveProject,
+            this.btnImportProject,
+            this.btnImportScript});
+            this.ctFileMenu.Name = "ctFileMenu";
+            this.ctFileMenu.Size = new System.Drawing.Size(155, 108);
             // 
             // btnLoadProject
             // 
@@ -386,9 +386,9 @@ namespace TGMacro
             this.pnlGroup.ResumeLayout(false);
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLanguage)).EndInit();
             this.ctHelpMenu.ResumeLayout(false);
             this.ctFileMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picLanguage)).EndInit();
             this.ResumeLayout(false);
 
         }
