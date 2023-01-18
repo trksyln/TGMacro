@@ -33,10 +33,10 @@ namespace TGMacro
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.pnlTop = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.pnlTop = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlMain.SuspendLayout();
             this.pnlTop.SuspendLayout();
@@ -79,6 +79,18 @@ namespace TGMacro
             this.pnlMain.Size = new System.Drawing.Size(424, 236);
             this.pnlMain.TabIndex = 16;
             // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::TGMacro.Properties.Resources.buymecoffee;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(164, 141);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(184, 53);
+            this.button1.TabIndex = 17;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // pnlTop
             // 
             this.pnlTop.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -92,8 +104,21 @@ namespace TGMacro
             this.pnlTop.MinimumSize = new System.Drawing.Size(0, 30);
             this.pnlTop.Name = "pnlTop";
             this.pnlTop.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.pnlTop.Size = new System.Drawing.Size(0, 30);
+            this.pnlTop.Size = new System.Drawing.Size(422, 30);
             this.pnlTop.TabIndex = 16;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackgroundImage = global::TGMacro.Properties.Resources.close_16;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(392, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(20, 30);
+            this.btnClose.TabIndex = 9;
+            this.btnClose.UseVisualStyleBackColor = true;
             // 
             // lblTitle
             // 
@@ -111,31 +136,6 @@ namespace TGMacro
             this.lblTitle.TabIndex = 6;
             this.lblTitle.Text = "About";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::TGMacro.Properties.Resources.buymecoffee;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(164, 141);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(184, 53);
-            this.button1.TabIndex = 17;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackgroundImage = global::TGMacro.Properties.Resources.close_16;
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(392, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(20, 30);
-            this.btnClose.TabIndex = 9;
-            this.btnClose.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
