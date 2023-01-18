@@ -22,7 +22,7 @@ namespace TGMacro
                 return;
             }
             Directory.SetCurrentDirectory(AppDomain.CurrentDomain.BaseDirectory);
-            AppDomain.CurrentDomain.AppendPrivatePath(@"Bin");
+            AppDomain.CurrentDomain.AppendPrivatePath(@"Lib");
             List<string> prjList = new List<string>();
             for (int i = 0; i < args.Length; i++)
             {
@@ -33,9 +33,9 @@ namespace TGMacro
                 }
             }
 
-            if (!File.Exists("Bin\\CSInputs.dll"))
+            if (!File.Exists("Lib\\CSInputs.dll"))
             {
-                MessageBox.Show("\"CSInputs.dll\" could not be found in \"Bin\" folder.", "Err");
+                MessageBox.Show("\"CSInputs.dll\" could not be found in \"Lib\" folder.", "Err");
                 return;
             }
 

@@ -430,6 +430,9 @@ namespace TGMacro
         {
             dtActions.CellDoubleClick += (s, e) =>
             {
+                if (e.RowIndex < 0)
+                    return;
+
                 Interfaces.IMacroAction act = (Interfaces.IMacroAction)actionTable.Rows[e.RowIndex][0];
                 frmActionEditor actEditor = new frmActionEditor(act);
                 if (actEditor.ShowDialog() == DialogResult.OK)
