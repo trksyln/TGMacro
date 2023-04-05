@@ -3,15 +3,16 @@
 &nbsp;
 ## Features
 ---
+- Easy to Use
 - Record mouse and keyboard events
+- Multi language support.
+- Multi Profile (Create multiple macros and use them simultaneously via keyboard / mouse shortcuts)
 - Trigger and loop macros by mouse or keyboard key combinations
 - Trigger and loop macros by on screen color changes
 - Import amc recoil scripts
-- No installation, Standalone application
+- Portable support
 - Save, load and combine macros
-- Automation for mouse and keyboard
 - Free. No Ads.
-- Multiple macros
 - Open Source
  
 [![tgmacro](https://trksyln.net/tgmacro/content/images/tgmacro0.png)](https://trksyln.net/tgmacro)
