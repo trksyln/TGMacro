@@ -103,7 +103,7 @@ namespace TMacro
             this.btnClose.AutoToolTip = true;
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnClose.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnClose.Image = global::TMacro.Properties.Resources.close_16;
+            this.btnClose.Image = global::TGMacro.Properties.Resources.close_16;
             this.btnClose.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(25, 25);

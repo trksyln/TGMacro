@@ -1,0 +1,260 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{8E763725-E104-41E8-BAC6-13932FEDFA59}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>WindowsApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>TGMacro</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CSInputs, Version=1.0.3.0, Culture=neutral, PublicKeyToken=a590058c64c9d8cd, processorArchitecture=MSIL">
+      <HintPath>packages\CSInputs.1.0.3\lib\net40\CSInputs.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="ico.ico" />
+    <Content Include="Resources\about_16.png" />
+    <Content Include="Resources\add_16.png" />
+    <None Include="Resources\add_32.bmp" />
+    <Content Include="Resources\add_32.png" />
+    <Content Include="Resources\buymecoffeCup.png" />
+    <Content Include="Resources\buymecoffee.png" />
+    <Content Include="Resources\checked_16.png" />
+    <Content Include="Resources\clear_16.png" />
+    <Content Include="Resources\clone_16.png" />
+    <Content Include="Resources\close_16.png" />
+    <Content Include="Resources\color_16.png" />
+    <Content Include="Resources\del_16.png" />
+    <Content Include="Resources\down_arrow_16.png" />
+    <Content Include="Resources\edit_16.png" />
+    <Content Include="Resources\english_16.png" />
+    <Content Include="Resources\import_16.png" />
+    <Content Include="Resources\import_sc_16.png" />
+    <Content Include="Resources\keyboard_16px.png" />
+    <Content Include="Resources\language_24.png" />
+    <Content Include="Resources\lock_16.png" />
+    <Content Include="Resources\min_16.png" />
+    <Content Include="Resources\mouse_16px.png" />
+    <Content Include="Resources\multi_16.png" />
+    <Content Include="Resources\open_16.png" />
+    <Content Include="Resources\paused_16.png" />
+    <Content Include="Resources\playing_16.png" />
+    <Content Include="Resources\png.png" />
+    <Content Include="Resources\record_16.png" />
+    <Content Include="Resources\run_16.png" />
+    <Content Include="Resources\save_16.png" />
+    <Content Include="Resources\save_32.png" />
+    <Content Include="Resources\settings_16.png" />
+    <Content Include="Resources\start_32.png" />
+    <Content Include="Resources\stop_32.png" />
+    <Content Include="Resources\stop_record_16.png" />
+    <Content Include="Resources\turkish_16.png" />
+    <Content Include="Resources\unChecked_16.png" />
+    <Content Include="Resources\unlock_16.png" />
+    <Content Include="Resources\update_16.png" />
+    <Content Include="Resources\up_arrow_16.png" />
+    <Content Include="Resources\wait_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".git\config" />
+    <None Include=".git\description" />
+    <None Include=".git\HEAD" />
+    <None Include=".git\hooks\applypatch-msg.sample" />
+    <None Include=".git\hooks\commit-msg.sample" />
+    <None Include=".git\hooks\fsmonitor-watchman.sample" />
+    <None Include=".git\hooks\post-update.sample" />
+    <None Include=".git\hooks\pre-applypatch.sample" />
+    <None Include=".git\hooks\pre-commit.sample" />
+    <None Include=".git\hooks\pre-merge-commit.sample" />
+    <None Include=".git\hooks\pre-push.sample" />
+    <None Include=".git\hooks\pre-rebase.sample" />
+    <None Include=".git\hooks\pre-receive.sample" />
+    <None Include=".git\hooks\prepare-commit-msg.sample" />
+    <None Include=".git\hooks\push-to-checkout.sample" />
+    <None Include=".git\hooks\update.sample" />
+    <None Include=".git\index" />
+    <None Include=".git\info\exclude" />
+    <None Include=".git\logs\HEAD" />
+    <None Include=".git\logs\refs\heads\main" />
+    <None Include=".git\logs\refs\remotes\origin\HEAD" />
+    <None Include=".git\objects\pack\pack-5e16b6b5df6b0638566b588ecc1012b25013ae1f.idx" />
+    <None Include=".git\objects\pack\pack-5e16b6b5df6b0638566b588ecc1012b25013ae1f.pack" />
+    <None Include=".git\packed-refs" />
+    <None Include=".git\refs\heads\main" />
+    <None Include=".git\refs\remotes\origin\HEAD" />
+    <None Include=".vs\slnx.sqlite" />
+    <None Include=".vs\TGMacro\FileContentIndex\6d09e778-dabf-4d7e-93ee-a486aafff922.vsidx" />
+    <None Include=".vs\TGMacro\FileContentIndex\read.lock" />
+    <None Include=".vs\TGMacro\v17\.wsuo" />
+    <None Include=".vs\VSWorkspaceState.json" />
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actions\KeyboardKeyAction.cs" />
+    <Compile Include="Actions\MouseKeyAction.cs" />
+    <Compile Include="Actions\MouseMoveAction.cs" />
+    <Compile Include="Actions\TextAction.cs" />
+    <Compile Include="Actions\WaitAction.cs" />
+    <Compile Include="Bases\LanguageBase.cs" />
+    <Compile Include="Bases\TriggerBase.cs" />
+    <Compile Include="Enums\ActionTypes.cs" />
+    <Compile Include="Enums\ColorTriggerMethods.cs" />
+    <Compile Include="Enums\KeyPressMethods.cs" />
+    <Compile Include="Enums\KeysForTrigger.cs" />
+    <Compile Include="Enums\TriggerKeyMethods.cs" />
+    <Compile Include="Enums\TriggerRunState.cs" />
+    <Compile Include="Enums\TriggerTypes.cs" />
+    <Compile Include="Interfaces\IMacroAction.cs" />
+    <Compile Include="Langs\en.cs" />
+    <Compile Include="Langs\tr.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs" />
+    <Compile Include="Statics\AppSession.cs" />
+    <Compile Include="Statics\SharedMethods.cs" />
+    <Compile Include="Statics\UIData.cs" />
+    <Compile Include="Sys\ActionTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sys\MacroItem.cs" />
+    <Compile Include="Sys\RGB.cs" />
+    <Compile Include="Sys\ScriptParser.cs" />
+    <Compile Include="Sys\TGMacroProject.cs" />
+    <Compile Include="Sys\WindowHandling.cs" />
+    <Compile Include="Triggers\ColorTrigger.cs" />
+    <Compile Include="Triggers\EmptyTrigger.cs" />
+    <Compile Include="Triggers\KeyboardTrigger.cs" />
+    <Compile Include="Triggers\MouseTrigger.cs" />
+    <Compile Include="UI\DatagridDoubleBuffer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmActionEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmActionEditor.Designer.cs">
+      <DependentUpon>frmActionEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmMacroEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmMacroEditor.Designer.cs">
+      <DependentUpon>frmMacroEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmTimeAdjuster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmTimeAdjuster.Designer.cs">
+      <DependentUpon>frmTimeAdjuster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\recordTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\recordTest.Designer.cs">
+      <DependentUpon>recordTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ucMacroItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ucMacroItem.Designer.cs">
+      <DependentUpon>ucMacroItem.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmActionEditor.resx">
+      <DependentUpon>frmActionEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmMacroEditor.resx">
+      <DependentUpon>frmMacroEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmTimeAdjuster.resx">
+      <DependentUpon>frmTimeAdjuster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\recordTest.resx">
+      <DependentUpon>recordTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ucMacroItem.resx">
+      <DependentUpon>ucMacroItem.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".git\objects\info\" />
+    <Folder Include=".git\refs\tags\" />
+    <Folder Include=".vs\TGMacro\FileContentIndex\merges\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>

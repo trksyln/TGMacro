@@ -33,7 +33,7 @@ namespace TGMacro
                 }
             }
 
-            if (!File.Exists("Lib\\CSInputs.dll"))
+            if (File.Exists("Lib\\CSInputs.dll"))
             {
                 MessageBox.Show("\"CSInputs.dll\" could not be found in \"Lib\" folder.", "Err");
                 return;
