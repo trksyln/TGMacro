@@ -37,6 +37,9 @@
     <Reference Include="CSInputs, Version=1.0.3.0, Culture=neutral, PublicKeyToken=a590058c64c9d8cd, processorArchitecture=MSIL">
       <HintPath>packages\CSInputs.1.0.3\lib\net40\CSInputs.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PresentationFramework.Luna" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
@@ -48,6 +51,7 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
@@ -173,6 +177,9 @@
     <Compile Include="Triggers\EmptyTrigger.cs" />
     <Compile Include="Triggers\KeyboardTrigger.cs" />
     <Compile Include="Triggers\MouseTrigger.cs" />
+    <Compile Include="UI\CodeFile1.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UI\DatagridDoubleBuffer.cs">
       <SubType>Component</SubType>
     </Compile>

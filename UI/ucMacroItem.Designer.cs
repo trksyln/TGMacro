@@ -105,7 +105,7 @@ namespace TGMacro
             // 
             // pnlEnable
             // 
-            this.pnlEnable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(71)))), ((int)(((byte)(30)))));
+            this.pnlEnable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.pnlEnable.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlEnable.Location = new System.Drawing.Point(0, 0);
             this.pnlEnable.Name = "pnlEnable";
@@ -128,7 +128,7 @@ namespace TGMacro
             // 
             // ucMacroItem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.picTriggerType);
@@ -138,7 +138,7 @@ namespace TGMacro
             this.Controls.Add(this.lblMacroName);
             this.Controls.Add(this.lblKeyInfo);
             this.Controls.Add(this.pnlEnable);
-            this.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.Name = "ucMacroItem";
             this.Size = new System.Drawing.Size(267, 65);
             ((System.ComponentModel.ISupportInitialize)(this.picTriggerType)).EndInit();

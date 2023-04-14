@@ -37,11 +37,11 @@ namespace TGMacro
             btnLoadProject.Text = Statics.AppSession.ActiveLanguage.btnLoadProject;
             btnSaveProject.Text = Statics.AppSession.ActiveLanguage.btnSaveProject;
             btnUpdates.Text = Statics.AppSession.ActiveLanguage.btnUpdates;
-            toolTip1.SetToolTip(btnStatus, Statics.AppSession.ActiveLanguage.text_macro_status);
+            /*toolTip1.SetToolTip(btnStatus, Statics.AppSession.ActiveLanguage.text_macro_status);*/
             toolTip1.SetToolTip(btnTopMost, Statics.AppSession.ActiveLanguage.btnTopMost);
-            toolTip1.SetToolTip(picLanguage, Statics.AppSession.ActiveLanguage.btnChangeLanguage);
+            /*toolTip1.SetToolTip(picLanguage, Statics.AppSession.ActiveLanguage.btnChangeLanguage);
             toolTip1.SetToolTip(cmbLanguage, Statics.AppSession.ActiveLanguage.btnChangeLanguage);
-            toolTip1.SetToolTip(button1, "Buy me a coffee");
+            toolTip1.SetToolTip(button1, "Buy me a coffee");*/
         }
         private void FrmMain_Shown(object sender, EventArgs e)
         {
@@ -55,18 +55,18 @@ namespace TGMacro
             ImportLanguages();
 
             // add languages to ui
-            cmbLanguage.DataSource = Statics.AppSession.Languages;
+            /*cmbLanguage.DataSource = Statics.AppSession.Languages;*/
 
             // check if three letter system language name exist in languages
             var systemLanguageMatch = Statics.AppSession.Languages.Where(t => t.language_name.ToLower() == System.Globalization.CultureInfo.CurrentCulture.ThreeLetterISOLanguageName.ToLower()).FirstOrDefault();
             if (systemLanguageMatch != null)
             {
-                cmbLanguage.SelectedIndex = cmbLanguage.FindString(systemLanguageMatch.language_name);
+                /*cmbLanguage.SelectedIndex = cmbLanguage.FindString(systemLanguageMatch.language_name);*/
                 Statics.AppSession.ActiveLanguage = systemLanguageMatch;
             }
             else
             {
-                cmbLanguage.SelectedIndex = cmbLanguage.FindString("ENG");
+                /*cmbLanguage.SelectedIndex = cmbLanguage.FindString("ENG");*/
                 Statics.AppSession.ActiveLanguage = eng;
             }
 
@@ -156,7 +156,7 @@ namespace TGMacro
         {
             Statics.AppSession.LanguageChanged += (s, e) => LoadLanguage();
 
-            button1.Click += (s, e) => Process.Start("https://www.buymeacoffee.com/trksyln");
+            /*button1.Click += (s, e) => Process.Start("https://www.buymeacoffee.com/trksyln");*/
 
             btnFile.Click += (s, e) =>
             {
@@ -180,10 +180,10 @@ namespace TGMacro
                 }
                 catch { }
             };
-            cmbLanguage.SelectedIndexChanged += (s, e) =>
+            /*cmbLanguage.SelectedIndexChanged += (s, e) =>
             {
                 Statics.AppSession.ActiveLanguage = (LanguageBase)cmbLanguage.SelectedItem;
-            };
+            };*/
 
             btnClose.Click += (s, e) => Close();
             btnMin.Click += (s, e) => WindowState = FormWindowState.Minimized;
@@ -213,11 +213,11 @@ namespace TGMacro
                 Statics.AppSession.Enable = !Statics.AppSession.Enable;
                 checkEnableButton();
             };
-            btnStatus.Click += (s, e) =>
+            /*btnStatus.Click += (s, e) =>
             {
                 Statics.AppSession.Enable = !Statics.AppSession.Enable;
                 checkEnableButton();
-            };
+            };*/
             btnTopMost.Click += (s, e) =>
             {
                 Statics.AppSession.TopMost = !Statics.AppSession.TopMost;
@@ -226,11 +226,11 @@ namespace TGMacro
             {
                 if (Statics.AppSession.Enable)
                 {
-                    btnStatus.BackgroundImage = Properties.Resources.playing_16;
+                    /*btnStatus.BackgroundImage = Properties.Resources.playing_16;*/
                 }
                 else
                 {
-                    btnStatus.BackgroundImage = Properties.Resources.paused_16;
+                    /*btnStatus.BackgroundImage = Properties.Resources.paused_16;*/
                 }
             };
 

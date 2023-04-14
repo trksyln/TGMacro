@@ -47,10 +47,10 @@ namespace TGMacro
             // 
             this.label1.AutoSize = true;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
             this.label1.Location = new System.Drawing.Point(159, 79);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 25);
+            this.label1.Size = new System.Drawing.Size(186, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "TGMacro v{0}";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -58,10 +58,10 @@ namespace TGMacro
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.label2.Location = new System.Drawing.Point(163, 114);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 19);
+            this.label2.Size = new System.Drawing.Size(187, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tarık SAYLAN @trksyln";
             // 
@@ -93,11 +93,11 @@ namespace TGMacro
             // 
             // pnlTop
             // 
-            this.pnlTop.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnlTop.BackColor = System.Drawing.SystemColors.Highlight;
             this.pnlTop.Controls.Add(this.btnClose);
             this.pnlTop.Controls.Add(this.lblTitle);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlTop.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.pnlTop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlTop.MaximumSize = new System.Drawing.Size(0, 30);
@@ -123,16 +123,16 @@ namespace TGMacro
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblTitle.BackColor = System.Drawing.SystemColors.Highlight;
             this.lblTitle.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblTitle.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.lblTitle.Location = new System.Drawing.Point(10, 0);
             this.lblTitle.MaximumSize = new System.Drawing.Size(0, 30);
             this.lblTitle.MinimumSize = new System.Drawing.Size(0, 30);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.lblTitle.Size = new System.Drawing.Size(52, 30);
+            this.lblTitle.Size = new System.Drawing.Size(61, 30);
             this.lblTitle.TabIndex = 6;
             this.lblTitle.Text = "About";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -149,11 +149,11 @@ namespace TGMacro
             // 
             // frmAbout
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(424, 236);
             this.Controls.Add(this.pnlMain);
-            this.Font = new System.Drawing.Font("Century Gothic", 7.8F);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAbout";
