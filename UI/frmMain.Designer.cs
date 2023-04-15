@@ -32,8 +32,8 @@ namespace TGMacro
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pnlGroup = new System.Windows.Forms.Panel();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnEnable = new System.Windows.Forms.Button();
+            this.btnAdd = new CustomButton();
+            this.btnEnable = new CustomButton();
             this.lblNoMacroMessage = new System.Windows.Forms.Label();
             this.pnlMacroList = new System.Windows.Forms.FlowLayoutPanel();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
@@ -76,6 +76,8 @@ namespace TGMacro
             // 
             this.btnAdd.BackColor = System.Drawing.SystemColors.Desktop;
             this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAdd.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnAdd.BorderRadius = 10;
             this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -94,6 +96,8 @@ namespace TGMacro
             // 
             this.btnEnable.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnEnable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEnable.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnEnable.BorderRadius = 10;
             this.btnEnable.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
             this.btnEnable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnable.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -172,7 +176,7 @@ namespace TGMacro
             this.btnTopMost.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnTopMost.FlatAppearance.BorderSize = 0;
             this.btnTopMost.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTopMost.Location = new System.Drawing.Point(386, 0);
+            this.btnTopMost.Location = new System.Drawing.Point(352, 0);
             this.btnTopMost.Name = "btnTopMost";
             this.btnTopMost.Size = new System.Drawing.Size(20, 30);
             this.btnTopMost.TabIndex = 10;
@@ -184,7 +188,7 @@ namespace TGMacro
             this.btnMin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMin.FlatAppearance.BorderSize = 0;
             this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMin.Location = new System.Drawing.Point(410, 0);
+            this.btnMin.Location = new System.Drawing.Point(393, 0);
             this.btnMin.Name = "btnMin";
             this.btnMin.Size = new System.Drawing.Size(20, 30);
             this.btnMin.TabIndex = 13;
@@ -347,8 +351,8 @@ namespace TGMacro
         private System.Windows.Forms.Label lblNoMacroMessage;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button btnEnable;
-        private System.Windows.Forms.Button btnAdd;
+        private CustomButton btnEnable;
+        private CustomButton btnAdd;
         public System.Windows.Forms.Panel pnlMain;
         public System.Windows.Forms.Button btnTopMost;
         public System.Windows.Forms.Button btnClose;

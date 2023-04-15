@@ -1,86 +1,120 @@
-﻿using Microsoft.Windows.Themes;
-using System;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
+﻿using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Windows.Forms;
-using Button = System.Windows.Forms.Button;
-using ComboBox = System.Windows.Forms.ComboBox;
-using Control = System.Windows.Controls.Control;
 
-public class CornerRadiusSetter : Button
+public static class ControlExtensions
 {
-    public static CornerRadius GetCornerRadius(DependencyObject obj) => (CornerRadius)obj.GetValue(CornerRadiusProperty);
-
-    public static void SetCornerRadius(DependencyObject obj, CornerRadius value) => obj.SetValue(CornerRadiusProperty, value);
-
-    public static readonly DependencyProperty CornerRadiusProperty =
-        DependencyProperty.RegisterAttached(nameof(Border.CornerRadius), typeof(CornerRadius),
-            typeof(CornerRadiusSetter), new UIPropertyMetadata(new CornerRadius(), CornerRadiusChangedCallback));
-
-    public static void CornerRadiusChangedCallback(object sender, DependencyPropertyChangedEventArgs e)
+    public static void ApplyBorderRadius(this Control control, int borderRadius)
     {
-        Control control = sender as Control;
+        var path = new System.Drawing.Drawing2D.GraphicsPath();
+        var rectangle = new RectangleF(0, 0, control.Width, control.Height);
+        var cornerRadius = borderRadius * 2;
 
-        if (control == null) return;
+        path.StartFigure();
+        path.AddArc(rectangle.X, rectangle.Y, cornerRadius, cornerRadius, 180, 90);
+        path.AddLine(rectangle.X + borderRadius, rectangle.Y, rectangle.Width - borderRadius, rectangle.Y);
+        path.AddArc(rectangle.X + rectangle.Width - cornerRadius, rectangle.Y, cornerRadius, cornerRadius, 270, 90);
+        path.AddLine(rectangle.Width, rectangle.Y + borderRadius, rectangle.Width, rectangle.Height - borderRadius);
+        path.AddArc(rectangle.X + rectangle.Width - cornerRadius,
+            rectangle.Y + rectangle.Height - cornerRadius, cornerRadius, cornerRadius, 0, 90);
+        path.AddLine(rectangle.Width - borderRadius, rectangle.Height, borderRadius, rectangle.Height);
+        path.AddArc(rectangle.X, rectangle.Y + rectangle.Height - cornerRadius, cornerRadius, cornerRadius, 90, 90);
+        path.AddLine(rectangle.X, rectangle.Height - borderRadius, rectangle.X, borderRadius);
+        path.CloseFigure();
 
-        control.Loaded += Control_Loaded;
+        control.Region = new Region(path);
     }
 
-    private static void Control_Loaded(object sender, EventArgs e)
+    public static void ApplyBorderColor(this Control control, Color color, int borderWidth)
     {
-        Control control = sender as Control;
-
-        if (control == null || control.Template == null) return;
-
-        control.ApplyTemplate();
-
-        CornerRadius cornerRadius = GetCornerRadius(control);
-
-        Control toggleButton = control.Template.FindName("toggleButton", control) as Control;
-
-        if (control is ComboBox && toggleButton != null)
+        control.Paint += (sender, e) =>
         {
-            toggleButton.ApplyTemplate();
-
-            // Set border radius for border radius border
-            Border toggleButtonBorder = toggleButton.Template.FindName("templateRoot", toggleButton) as Border;
-            toggleButtonBorder.CornerRadius = cornerRadius;
-
-            // Expand padding for combobox to avoid text clipping by border radius
-            control.Padding = new Thickness(
-                    control.Padding.Left + cornerRadius.BottomLeft,
-                    control.Padding.Top,
-                    control.Padding.Right + cornerRadius.BottomRight,
-                    control.Padding.Bottom);
-
-            // Decrease width of dropdown and center it to avoid showing "sticking" dropdown corners
-            Popup popup = control.Template.FindName("PART_Popup", control) as Popup;
-
-            /*Popup popup = control.Template.FindName("PART_Popup", control) as Popup;*/
-
-            if (popup != null)
-            {
-                double offset = cornerRadius.BottomLeft - 1;
-                if (offset > 0)
-                    popup.HorizontalOffset = offset;
-            }
-
-            SystemDropShadowChrome shadowChrome = control.Template.FindName("shadow", control) as SystemDropShadowChrome;
-
-            if (shadowChrome != null)
-            {
-                double minWidth = control.ActualWidth - cornerRadius.BottomLeft - cornerRadius.BottomRight;
-                if (minWidth > 0)
-                    shadowChrome.MinWidth = minWidth;
-            }
-        }
-
-        // setting borders for non-combobox controls
-        Border border = control.Template.FindName("border", control) as Border;
-
-        if (border == null) return;
-
-        border.CornerRadius = cornerRadius;
+            var rectangle = new Rectangle(0, 0, control.Width, control.Height);
+            ControlPaint.DrawBorder(e.Graphics, rectangle,
+                color, borderWidth, ButtonBorderStyle.Solid,
+                color, borderWidth, ButtonBorderStyle.Solid,
+                color, borderWidth, ButtonBorderStyle.Solid,
+                color, borderWidth, ButtonBorderStyle.Solid);
+        };
     }
 }
+
+
+
+
+
+public class CustomButton : Button
+{
+    private int borderRadius = 0;
+    private Color borderColor = Color.Black;
+
+    public int BorderRadius
+    {
+        get { return borderRadius; }
+        set
+        {
+            if (value < 0)
+            {
+                borderRadius = 0;
+            }
+            else if (value > Math.Min(Width, Height) / 2)
+            {
+                borderRadius = Math.Min(Width, Height) / 2;
+            }
+            else
+            {
+                borderRadius = value;
+            }
+            Invalidate();
+        }
+    }
+
+    public Color BorderColor
+    {
+        get { return borderColor; }
+        set
+        {
+            borderColor = value;
+            Invalidate();
+        }
+    }
+
+    protected override void OnPaint(PaintEventArgs e)
+    {
+        base.OnPaint(e);
+
+        if (borderRadius > 0)
+        {
+            using (Pen pen = new Pen(borderColor, 2))
+            {
+                e.Graphics.DrawRoundedRectangle(pen, ClientRectangle, borderRadius);
+            }
+        }
+    }
+}
+
+public static class GraphicsExtensions
+{
+    public static void DrawRoundedRectangle(this Graphics graphics, Pen pen, RectangleF rectangle, float radius)
+    {
+        float diameter = radius * 2;
+        SizeF sizeF = new SizeF(diameter, diameter);
+        RectangleF arc = new RectangleF(rectangle.Location, sizeF);
+        pen.LineJoin = System.Drawing.Drawing2D.LineJoin.Round;
+
+        graphics.DrawArc(pen, arc, 180, 90);
+        graphics.DrawLine(pen, rectangle.Left + radius, rectangle.Top, rectangle.Right - radius, rectangle.Top);
+        arc.X = rectangle.Right - diameter;
+        graphics.DrawArc(pen, arc, 270, 90);
+        graphics.DrawLine(pen, rectangle.Right, rectangle.Top + radius, rectangle.Right, rectangle.Bottom - radius);
+        arc.Y = rectangle.Bottom - diameter;
+        graphics.DrawArc(pen, arc, 0, 90);
+        graphics.DrawLine(pen, rectangle.Right - radius, rectangle.Bottom, rectangle.Left + radius, rectangle.Bottom);
+        arc.X = rectangle.Left;
+        graphics.DrawArc(pen, arc, 90, 90);
+        graphics.DrawLine(pen, rectangle.Left, rectangle.Bottom - radius, rectangle.Left, rectangle.Top + radius);
+    }
+}
+
+

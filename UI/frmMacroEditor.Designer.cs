@@ -1,8 +1,11 @@
 ﻿
+using System.Windows.Forms;
 using TGMacro.UI;
+/*using CustomControls;*/
 
 namespace TGMacro
 {
+    
     partial class frmMacroEditor
     {
         /// <summary>
@@ -76,7 +79,7 @@ namespace TGMacro
             this.btnClose = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.grpRecord = new System.Windows.Forms.GroupBox();
-            this.btnRecord = new CornerRadiusSetter();
+            this.btnRecord = new CustomButton();
             this.cbDelays = new System.Windows.Forms.CheckBox();
             this.cbKeyboardKeys = new System.Windows.Forms.CheckBox();
             this.cbMouseButtons = new System.Windows.Forms.CheckBox();
@@ -84,8 +87,8 @@ namespace TGMacro
             this.lblRecordThis = new System.Windows.Forms.Label();
             this.lblMouseCapPos = new System.Windows.Forms.Label();
             this.cbMousePositioning = new System.Windows.Forms.ComboBox();
-            this.btnTest = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
+            this.btnTest = new CustomButton();
+            this.btnSave = new CustomButton();
             this.grpTrigger.SuspendLayout();
             this.pnl_colors.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mPosY)).BeginInit();
@@ -125,9 +128,9 @@ namespace TGMacro
             this.pnl_colors.Controls.Add(this.label1);
             this.pnl_colors.Controls.Add(this.lblColorPos);
             this.pnl_colors.Controls.Add(this.lblGrabInfo);
-            this.pnl_colors.Location = new System.Drawing.Point(17, 139);
+            this.pnl_colors.Location = new System.Drawing.Point(17, 144);
             this.pnl_colors.Name = "pnl_colors";
-            this.pnl_colors.Size = new System.Drawing.Size(331, 178);
+            this.pnl_colors.Size = new System.Drawing.Size(331, 173);
             this.pnl_colors.TabIndex = 10;
             // 
             // lblGrabInfo2
@@ -610,6 +613,8 @@ namespace TGMacro
             // 
             this.btnRecord.BackColor = System.Drawing.Color.Red;
             this.btnRecord.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRecord.BorderColor = System.Drawing.Color.Snow;
+            this.btnRecord.BorderRadius = 10;
             this.btnRecord.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
             this.btnRecord.FlatAppearance.BorderSize = 0;
             this.btnRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -620,7 +625,6 @@ namespace TGMacro
             this.btnRecord.Size = new System.Drawing.Size(121, 40);
             this.btnRecord.TabIndex = 13;
             this.btnRecord.Text = "Record\r\n";
-            this.btnRecord.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRecord.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnRecord.UseVisualStyleBackColor = false;
             // 
@@ -708,6 +712,8 @@ namespace TGMacro
             // 
             this.btnTest.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnTest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTest.BorderColor = System.Drawing.Color.Silver;
+            this.btnTest.BorderRadius = 10;
             this.btnTest.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
             this.btnTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTest.Image = global::TGMacro.Properties.Resources.start_32;
@@ -724,8 +730,9 @@ namespace TGMacro
             // 
             this.btnSave.BackColor = System.Drawing.SystemColors.Desktop;
             this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSave.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnSave.BorderRadius = 10;
             this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
-            this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSave.Image = global::TGMacro.Properties.Resources.save_32;
@@ -784,7 +791,7 @@ namespace TGMacro
         private System.Windows.Forms.Label lblTrgMethod;
         private System.Windows.Forms.ComboBox cbTriggerMethod;
         private System.Windows.Forms.Label lblTrgType;
-        private System.Windows.Forms.Button btnSave;
+        private CustomButton btnSave;
         private System.Windows.Forms.Panel pnl_keys;
         private System.Windows.Forms.Panel pnl_colors;
         private System.Windows.Forms.Label label3;
@@ -803,7 +810,6 @@ namespace TGMacro
         private System.Windows.Forms.Button btnClone;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.GroupBox grpName;
-        private System.Windows.Forms.Button btnTest;
         private System.Windows.Forms.Button btnImportScript;
         private System.Windows.Forms.TextBox txtKeySetter;
         private System.Windows.Forms.Panel pnlMain;
@@ -820,10 +826,11 @@ namespace TGMacro
         private System.Windows.Forms.CheckBox cbMouseMovements;
         private System.Windows.Forms.Label lblRecordThis;
         private System.Windows.Forms.Label lblGrabInfo2;
-        private CornerRadiusSetter btnRecord;
+        private CustomButton btnRecord;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Button btnAdjustTiming;
         private System.Windows.Forms.Button btnMultiAction;
         public System.Windows.Forms.Button btnMin;
+        private CustomButton btnTest;
     }
 }
