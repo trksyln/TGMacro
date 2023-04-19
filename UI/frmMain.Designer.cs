@@ -270,14 +270,13 @@ namespace TGMacro
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Image = global::TGMacro.Properties.Resources.add_32;
-            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAdd.Location = new System.Drawing.Point(247, 474);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(193, 41);
             this.btnAdd.TabIndex = 16;
-            this.btnAdd.Text = "Add New Macro";
+            this.btnAdd.Text = "Add New";
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdd.UseVisualStyleBackColor = false;
             // 
             // btnEnable
@@ -288,12 +287,11 @@ namespace TGMacro
             this.btnEnable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnable.ForeColor = System.Drawing.Color.White;
             this.btnEnable.Image = ((System.Drawing.Image)(resources.GetObject("btnEnable.Image")));
-            this.btnEnable.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEnable.Location = new System.Drawing.Point(27, 474);
             this.btnEnable.Name = "btnEnable";
             this.btnEnable.Size = new System.Drawing.Size(193, 41);
             this.btnEnable.TabIndex = 15;
-            this.btnEnable.Text = "Enable {HOME}";
+            this.btnEnable.Text = "Enable (Home)";
             this.btnEnable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEnable.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEnable.UseVisualStyleBackColor = false;

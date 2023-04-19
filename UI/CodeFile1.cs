@@ -21,6 +21,7 @@ public class CustomButton : Button
         this.Size = new System.Drawing.Size(150, 20);
         this.BackColor = System.Drawing.SystemColors.Control;
         this.ForeColor = Color.White;
+        Console.WriteLine(this.Text);
     }
 
     private GraphicsPath GetFigurePath(RectangleF rect, float radius)
@@ -42,7 +43,20 @@ public class CustomButton : Button
         base.OnPaint(pevent);
         pevent.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
 
+        /*String str = this.Text.ToString();
 
+        this.ResetText();
+
+        if(str == "Add New Macro")
+        {
+            str = "Add New";
+        }
+        if(str == "Enable {HOME}")
+        {
+            str = "Enable (Home)";
+        }
+
+        this.Text = str;*/
         RectangleF rectSurface = new RectangleF(0, 0, this.Width, this.Height);
         RectangleF rectBorder = new RectangleF(1, 1, this.Width - 0.8F, this.Height);
 

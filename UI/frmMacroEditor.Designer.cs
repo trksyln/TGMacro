@@ -38,11 +38,21 @@ namespace TGMacro
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.btnClone = new System.Windows.Forms.Button();
+            this.btnEditAction = new System.Windows.Forms.Button();
+            this.btnAdjustTiming = new System.Windows.Forms.Button();
+            this.btnMultiAction = new System.Windows.Forms.Button();
+            this.btnDeleteAction = new System.Windows.Forms.Button();
+            this.txtMacroName = new System.Windows.Forms.TextBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.btnClear = new System.Windows.Forms.Button();
             this.pnlTop = new System.Windows.Forms.Panel();
             this.btnMin = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.btnImportScript = new System.Windows.Forms.Button();
+            this.btnActionMoveUp = new System.Windows.Forms.Button();
+            this.btnActionMoveDown = new System.Windows.Forms.Button();
             this.grpRecord = new CustomGroupBox();
             this.btnRecord = new CustomButton();
             this.cbDelays = new System.Windows.Forms.CheckBox();
@@ -54,7 +64,6 @@ namespace TGMacro
             this.cbMousePositioning = new System.Windows.Forms.ComboBox();
             this.btnTest = new CustomButton();
             this.grpName = new CustomGroupBox();
-            this.txtMacroName = new System.Windows.Forms.TextBox();
             this.grpTrigger = new CustomGroupBox();
             this.pnl_colors = new System.Windows.Forms.Panel();
             this.lblGrabInfo2 = new System.Windows.Forms.Label();
@@ -75,17 +84,8 @@ namespace TGMacro
             this.cbTriggerType = new System.Windows.Forms.ComboBox();
             this.btnSave = new CustomButton();
             this.grpActions = new CustomGroupBox();
-            this.btnMultiAction = new System.Windows.Forms.Button();
-            this.btnAdjustTiming = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnImportScript = new System.Windows.Forms.Button();
-            this.btnClone = new System.Windows.Forms.Button();
             this.dtActions = new TGMacro.UI.DatagridDoubleBuffer();
-            this.btnDeleteAction = new System.Windows.Forms.Button();
-            this.btnEditAction = new System.Windows.Forms.Button();
-            this.btnActionMoveUp = new System.Windows.Forms.Button();
             this.btnAddAction = new System.Windows.Forms.Button();
-            this.btnActionMoveDown = new System.Windows.Forms.Button();
             this.pnlMain.SuspendLayout();
             this.pnlTop.SuspendLayout();
             this.grpRecord.SuspendLayout();
@@ -130,6 +130,78 @@ namespace TGMacro
             this.pnlMain.Size = new System.Drawing.Size(862, 674);
             this.pnlMain.TabIndex = 11;
             // 
+            // btnClone
+            // 
+            this.btnClone.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClone.BackgroundImage")));
+            this.btnClone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnClone.FlatAppearance.BorderSize = 0;
+            this.btnClone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClone.Location = new System.Drawing.Point(444, 235);
+            this.btnClone.Name = "btnClone";
+            this.btnClone.Size = new System.Drawing.Size(25, 25);
+            this.btnClone.TabIndex = 11;
+            this.btnClone.UseVisualStyleBackColor = true;
+            // 
+            // btnEditAction
+            // 
+            this.btnEditAction.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEditAction.BackgroundImage")));
+            this.btnEditAction.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEditAction.FlatAppearance.BorderSize = 0;
+            this.btnEditAction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditAction.Location = new System.Drawing.Point(444, 189);
+            this.btnEditAction.Name = "btnEditAction";
+            this.btnEditAction.Size = new System.Drawing.Size(25, 25);
+            this.btnEditAction.TabIndex = 9;
+            this.btnEditAction.UseVisualStyleBackColor = true;
+            // 
+            // btnAdjustTiming
+            // 
+            this.btnAdjustTiming.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdjustTiming.BackgroundImage")));
+            this.btnAdjustTiming.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAdjustTiming.FlatAppearance.BorderSize = 0;
+            this.btnAdjustTiming.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdjustTiming.Location = new System.Drawing.Point(444, 324);
+            this.btnAdjustTiming.Name = "btnAdjustTiming";
+            this.btnAdjustTiming.Size = new System.Drawing.Size(25, 25);
+            this.btnAdjustTiming.TabIndex = 15;
+            this.btnAdjustTiming.UseVisualStyleBackColor = true;
+            // 
+            // btnMultiAction
+            // 
+            this.btnMultiAction.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMultiAction.BackgroundImage")));
+            this.btnMultiAction.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMultiAction.FlatAppearance.BorderSize = 0;
+            this.btnMultiAction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMultiAction.Location = new System.Drawing.Point(443, 375);
+            this.btnMultiAction.Name = "btnMultiAction";
+            this.btnMultiAction.Size = new System.Drawing.Size(25, 25);
+            this.btnMultiAction.TabIndex = 16;
+            this.btnMultiAction.UseVisualStyleBackColor = true;
+            // 
+            // btnDeleteAction
+            // 
+            this.btnDeleteAction.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDeleteAction.BackgroundImage")));
+            this.btnDeleteAction.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnDeleteAction.FlatAppearance.BorderSize = 0;
+            this.btnDeleteAction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteAction.Location = new System.Drawing.Point(444, 276);
+            this.btnDeleteAction.Name = "btnDeleteAction";
+            this.btnDeleteAction.Size = new System.Drawing.Size(25, 25);
+            this.btnDeleteAction.TabIndex = 10;
+            this.btnDeleteAction.UseVisualStyleBackColor = true;
+            // 
+            // txtMacroName
+            // 
+            this.txtMacroName.BackColor = System.Drawing.Color.White;
+            this.txtMacroName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMacroName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.txtMacroName.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.txtMacroName.Location = new System.Drawing.Point(33, 76);
+            this.txtMacroName.Name = "txtMacroName";
+            this.txtMacroName.Size = new System.Drawing.Size(420, 21);
+            this.txtMacroName.TabIndex = 0;
+            this.txtMacroName.Text = "Macro 01";
+            // 
             // progressBar1
             // 
             this.progressBar1.Location = new System.Drawing.Point(514, 657);
@@ -137,6 +209,18 @@ namespace TGMacro
             this.progressBar1.Size = new System.Drawing.Size(135, 5);
             this.progressBar1.TabIndex = 14;
             this.progressBar1.Visible = false;
+            // 
+            // btnClear
+            // 
+            this.btnClear.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClear.BackgroundImage")));
+            this.btnClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnClear.FlatAppearance.BorderSize = 0;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Location = new System.Drawing.Point(443, 422);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(25, 25);
+            this.btnClear.TabIndex = 14;
+            this.btnClear.UseVisualStyleBackColor = true;
             // 
             // pnlTop
             // 
@@ -152,7 +236,7 @@ namespace TGMacro
             this.pnlTop.MinimumSize = new System.Drawing.Size(0, 30);
             this.pnlTop.Name = "pnlTop";
             this.pnlTop.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.pnlTop.Size = new System.Drawing.Size(860, 30);
+            this.pnlTop.Size = new System.Drawing.Size(0, 30);
             this.pnlTop.TabIndex = 13;
             // 
             // btnMin
@@ -197,6 +281,42 @@ namespace TGMacro
             this.lblTitle.Text = "Macro Editor";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // btnImportScript
+            // 
+            this.btnImportScript.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImportScript.BackgroundImage")));
+            this.btnImportScript.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnImportScript.FlatAppearance.BorderSize = 0;
+            this.btnImportScript.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImportScript.Location = new System.Drawing.Point(444, 618);
+            this.btnImportScript.Name = "btnImportScript";
+            this.btnImportScript.Size = new System.Drawing.Size(25, 25);
+            this.btnImportScript.TabIndex = 12;
+            this.btnImportScript.UseVisualStyleBackColor = true;
+            // 
+            // btnActionMoveUp
+            // 
+            this.btnActionMoveUp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnActionMoveUp.BackgroundImage")));
+            this.btnActionMoveUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnActionMoveUp.FlatAppearance.BorderSize = 0;
+            this.btnActionMoveUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActionMoveUp.Location = new System.Drawing.Point(444, 499);
+            this.btnActionMoveUp.Name = "btnActionMoveUp";
+            this.btnActionMoveUp.Size = new System.Drawing.Size(24, 24);
+            this.btnActionMoveUp.TabIndex = 3;
+            this.btnActionMoveUp.UseVisualStyleBackColor = true;
+            // 
+            // btnActionMoveDown
+            // 
+            this.btnActionMoveDown.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnActionMoveDown.BackgroundImage")));
+            this.btnActionMoveDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnActionMoveDown.FlatAppearance.BorderSize = 0;
+            this.btnActionMoveDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActionMoveDown.Location = new System.Drawing.Point(445, 542);
+            this.btnActionMoveDown.Name = "btnActionMoveDown";
+            this.btnActionMoveDown.Size = new System.Drawing.Size(24, 24);
+            this.btnActionMoveDown.TabIndex = 4;
+            this.btnActionMoveDown.UseVisualStyleBackColor = true;
+            // 
             // grpRecord
             // 
             this.grpRecord.BackgroundColor = System.Drawing.Color.White;
@@ -234,16 +354,16 @@ namespace TGMacro
             this.btnRecord.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
             this.btnRecord.FlatAppearance.BorderSize = 0;
             this.btnRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecord.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRecord.ForeColor = System.Drawing.Color.White;
             this.btnRecord.Image = ((System.Drawing.Image)(resources.GetObject("btnRecord.Image")));
-            this.btnRecord.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRecord.Location = new System.Drawing.Point(214, 167);
             this.btnRecord.Name = "btnRecord";
             this.btnRecord.Size = new System.Drawing.Size(121, 52);
             this.btnRecord.TabIndex = 13;
             this.btnRecord.Text = "Record\r\n";
             this.btnRecord.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRecord.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnRecord.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRecord.UseVisualStyleBackColor = false;
             // 
             // cbDelays
@@ -335,12 +455,12 @@ namespace TGMacro
             this.btnTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTest.ForeColor = System.Drawing.Color.White;
             this.btnTest.Image = ((System.Drawing.Image)(resources.GetObject("btnTest.Image")));
-            this.btnTest.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTest.Location = new System.Drawing.Point(514, 618);
             this.btnTest.Name = "btnTest";
             this.btnTest.Size = new System.Drawing.Size(137, 41);
             this.btnTest.TabIndex = 11;
             this.btnTest.Text = "Test";
+            this.btnTest.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTest.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTest.UseVisualStyleBackColor = false;
             // 
@@ -365,18 +485,6 @@ namespace TGMacro
             this.grpName.Size = new System.Drawing.Size(459, 79);
             this.grpName.TabIndex = 8;
             this.grpName.TabStop = false;
-            // 
-            // txtMacroName
-            // 
-            this.txtMacroName.BackColor = System.Drawing.Color.White;
-            this.txtMacroName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMacroName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.txtMacroName.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.txtMacroName.Location = new System.Drawing.Point(33, 76);
-            this.txtMacroName.Name = "txtMacroName";
-            this.txtMacroName.Size = new System.Drawing.Size(420, 21);
-            this.txtMacroName.TabIndex = 0;
-            this.txtMacroName.Text = "Macro 01";
             // 
             // grpTrigger
             // 
@@ -604,7 +712,7 @@ namespace TGMacro
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Save";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = false;
             // 
             // grpActions
@@ -631,66 +739,6 @@ namespace TGMacro
             this.grpActions.Size = new System.Drawing.Size(462, 535);
             this.grpActions.TabIndex = 2;
             this.grpActions.TabStop = false;
-            // 
-            // btnMultiAction
-            // 
-            this.btnMultiAction.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMultiAction.BackgroundImage")));
-            this.btnMultiAction.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMultiAction.FlatAppearance.BorderSize = 0;
-            this.btnMultiAction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMultiAction.Location = new System.Drawing.Point(443, 375);
-            this.btnMultiAction.Name = "btnMultiAction";
-            this.btnMultiAction.Size = new System.Drawing.Size(25, 25);
-            this.btnMultiAction.TabIndex = 16;
-            this.btnMultiAction.UseVisualStyleBackColor = true;
-            // 
-            // btnAdjustTiming
-            // 
-            this.btnAdjustTiming.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdjustTiming.BackgroundImage")));
-            this.btnAdjustTiming.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAdjustTiming.FlatAppearance.BorderSize = 0;
-            this.btnAdjustTiming.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdjustTiming.Location = new System.Drawing.Point(444, 324);
-            this.btnAdjustTiming.Name = "btnAdjustTiming";
-            this.btnAdjustTiming.Size = new System.Drawing.Size(25, 25);
-            this.btnAdjustTiming.TabIndex = 15;
-            this.btnAdjustTiming.UseVisualStyleBackColor = true;
-            // 
-            // btnClear
-            // 
-            this.btnClear.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClear.BackgroundImage")));
-            this.btnClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnClear.FlatAppearance.BorderSize = 0;
-            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Location = new System.Drawing.Point(443, 422);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(25, 25);
-            this.btnClear.TabIndex = 14;
-            this.btnClear.UseVisualStyleBackColor = true;
-            // 
-            // btnImportScript
-            // 
-            this.btnImportScript.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImportScript.BackgroundImage")));
-            this.btnImportScript.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnImportScript.FlatAppearance.BorderSize = 0;
-            this.btnImportScript.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImportScript.Location = new System.Drawing.Point(444, 618);
-            this.btnImportScript.Name = "btnImportScript";
-            this.btnImportScript.Size = new System.Drawing.Size(25, 25);
-            this.btnImportScript.TabIndex = 12;
-            this.btnImportScript.UseVisualStyleBackColor = true;
-            // 
-            // btnClone
-            // 
-            this.btnClone.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClone.BackgroundImage")));
-            this.btnClone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnClone.FlatAppearance.BorderSize = 0;
-            this.btnClone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClone.Location = new System.Drawing.Point(444, 235);
-            this.btnClone.Name = "btnClone";
-            this.btnClone.Size = new System.Drawing.Size(25, 25);
-            this.btnClone.TabIndex = 11;
-            this.btnClone.UseVisualStyleBackColor = true;
             // 
             // dtActions
             // 
@@ -736,42 +784,6 @@ namespace TGMacro
             this.dtActions.TabIndex = 8;
             this.dtActions.TabStop = false;
             // 
-            // btnDeleteAction
-            // 
-            this.btnDeleteAction.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDeleteAction.BackgroundImage")));
-            this.btnDeleteAction.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnDeleteAction.FlatAppearance.BorderSize = 0;
-            this.btnDeleteAction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteAction.Location = new System.Drawing.Point(444, 276);
-            this.btnDeleteAction.Name = "btnDeleteAction";
-            this.btnDeleteAction.Size = new System.Drawing.Size(25, 25);
-            this.btnDeleteAction.TabIndex = 10;
-            this.btnDeleteAction.UseVisualStyleBackColor = true;
-            // 
-            // btnEditAction
-            // 
-            this.btnEditAction.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEditAction.BackgroundImage")));
-            this.btnEditAction.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEditAction.FlatAppearance.BorderSize = 0;
-            this.btnEditAction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditAction.Location = new System.Drawing.Point(444, 189);
-            this.btnEditAction.Name = "btnEditAction";
-            this.btnEditAction.Size = new System.Drawing.Size(25, 25);
-            this.btnEditAction.TabIndex = 9;
-            this.btnEditAction.UseVisualStyleBackColor = true;
-            // 
-            // btnActionMoveUp
-            // 
-            this.btnActionMoveUp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnActionMoveUp.BackgroundImage")));
-            this.btnActionMoveUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnActionMoveUp.FlatAppearance.BorderSize = 0;
-            this.btnActionMoveUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActionMoveUp.Location = new System.Drawing.Point(444, 499);
-            this.btnActionMoveUp.Name = "btnActionMoveUp";
-            this.btnActionMoveUp.Size = new System.Drawing.Size(24, 24);
-            this.btnActionMoveUp.TabIndex = 3;
-            this.btnActionMoveUp.UseVisualStyleBackColor = true;
-            // 
             // btnAddAction
             // 
             this.btnAddAction.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddAction.BackgroundImage")));
@@ -783,18 +795,6 @@ namespace TGMacro
             this.btnAddAction.Size = new System.Drawing.Size(25, 25);
             this.btnAddAction.TabIndex = 8;
             this.btnAddAction.UseVisualStyleBackColor = true;
-            // 
-            // btnActionMoveDown
-            // 
-            this.btnActionMoveDown.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnActionMoveDown.BackgroundImage")));
-            this.btnActionMoveDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnActionMoveDown.FlatAppearance.BorderSize = 0;
-            this.btnActionMoveDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActionMoveDown.Location = new System.Drawing.Point(445, 542);
-            this.btnActionMoveDown.Name = "btnActionMoveDown";
-            this.btnActionMoveDown.Size = new System.Drawing.Size(24, 24);
-            this.btnActionMoveDown.TabIndex = 4;
-            this.btnActionMoveDown.UseVisualStyleBackColor = true;
             // 
             // frmMacroEditor
             // 
