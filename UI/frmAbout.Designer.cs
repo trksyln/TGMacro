@@ -109,7 +109,7 @@ namespace TGMacro
             // 
             // btnClose
             // 
-            this.btnClose.BackgroundImage = global::TGMacro.Properties.Resources.close_16;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnClose.FlatAppearance.BorderSize = 0;

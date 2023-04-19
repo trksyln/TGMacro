@@ -156,7 +156,7 @@ namespace TGMacro
         {
             Statics.AppSession.LanguageChanged += (s, e) => LoadLanguage();
 
-            /*button1.Click += (s, e) => Process.Start("https://www.buymeacoffee.com/trksyln");*/
+           /* button1.Click += (s, e) => Process.Start("https://www.buymeacoffee.com/trksyln");*/
 
             btnFile.Click += (s, e) =>
             {
@@ -452,5 +452,7 @@ namespace TGMacro
                 item.Width = pnlMacroList.VerticalScroll.Visible ? pnlMacroList.Width - 30 : pnlMacroList.Width - 6;
             }
         }
+
+        
     }
 }

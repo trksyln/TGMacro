@@ -57,7 +57,7 @@ namespace TGMacro
             0,
             -2147483648});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 24);
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 22);
             this.numericUpDown1.TabIndex = 0;
             this.numericUpDown1.Value = new decimal(new int[] {
             5,
@@ -79,7 +79,7 @@ namespace TGMacro
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(13, 95);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 18);
+            this.label2.Size = new System.Drawing.Size(86, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Milliseconds :";
             // 
@@ -115,11 +115,11 @@ namespace TGMacro
             // 
             // pnlTop
             // 
-            this.pnlTop.BackColor = System.Drawing.SystemColors.Highlight;
+            this.pnlTop.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pnlTop.Controls.Add(this.btnClose);
             this.pnlTop.Controls.Add(this.lblTitle);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlTop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.pnlTop.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlTop.MaximumSize = new System.Drawing.Size(0, 30);
@@ -145,16 +145,16 @@ namespace TGMacro
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.BackColor = System.Drawing.SystemColors.Highlight;
+            this.lblTitle.BackColor = System.Drawing.SystemColors.ControlLight;
             this.lblTitle.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold);
             this.lblTitle.Location = new System.Drawing.Point(10, 0);
             this.lblTitle.MaximumSize = new System.Drawing.Size(0, 30);
             this.lblTitle.MinimumSize = new System.Drawing.Size(0, 30);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.lblTitle.Size = new System.Drawing.Size(118, 30);
+            this.lblTitle.Size = new System.Drawing.Size(93, 30);
             this.lblTitle.TabIndex = 6;
             this.lblTitle.Text = "Wait Adjuster";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -162,11 +162,11 @@ namespace TGMacro
             // frmTimeAdjuster
             // 
             this.AcceptButton = this.btnSave;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(299, 182);
             this.Controls.Add(this.pnlMain);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;

@@ -117,6 +117,27 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnDelete.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAADESURBVDhP1dOtCgJBFIbhQRBsJsFgshlMglUQ8QIsWgwi
+        mDV5EUaDyN6BYDPbBZNJDGaDWESsvp8zYWX/WNDgBw97dmc4zC5nzS+TxwAjNPQgbWY4YIUnCohNDk20
+        nA08V9/Rd7VUEEgVRzywj3CC1hcIjbprY1SS1j82tFGzpZlAr5iqwRJTW5obyvizBnOMbWkuKCFVA02i
+        PpxSdNfEBnWckXnfBdPD1pbhyWLnaIT91riii9jo2B3oJ/IbQtP6zRjzAlP6NPxjn/nJAAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="btnEdit.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        dAAAAHQBMYXlgQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADgSURBVDhPrZK9
+        DgFBGEW38Fd7CeE5PAoeQCvR04hGSa9BQU08jNpfzT2zO5M1MzYbcZKTNbtz73yW5J9U5UCu5NpzKqEm
+        x3Ium9ywED7Lu9zLWAHhnbzJi5xJBycTbplViA1f5TC7jqSDsTk5BuGtzIcPsi4ddlQfwhtZGIZvBQuZ
+        D/M1KJ1kOmIFDckLO8l8GIL9sYKufElKmMSGoVQBE1DC1adUQRHBfn5G3m5Z2LtMP6bwR3rItlkV05FP
+        2TOrjIrkbVNCux3Rl2fsOUoyH3CjLxktFkaecXIQ/pEkeQPSJUkgBHGWbgAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

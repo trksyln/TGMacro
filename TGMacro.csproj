@@ -166,6 +166,9 @@
     <Compile Include="Triggers\EmptyTrigger.cs" />
     <Compile Include="Triggers\KeyboardTrigger.cs" />
     <Compile Include="Triggers\MouseTrigger.cs" />
+    <Compile Include="UI\CodeFile1.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UI\DatagridDoubleBuffer.cs">
       <SubType>Component</SubType>
     </Compile>

@@ -57,7 +57,7 @@ namespace TGMacro
             this.pnlMouseMoveMethod = new System.Windows.Forms.Panel();
             this.lblPositioning = new System.Windows.Forms.Label();
             this.cbMouseMoveMethod = new System.Windows.Forms.ComboBox();
-            this.btnSave = new System.Windows.Forms.Button();
+            this.btnSave = new CustomButton();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlTop = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
@@ -80,11 +80,10 @@ namespace TGMacro
             // 
             // cbActionType
             // 
-            this.cbActionType.BackColor = System.Drawing.Color.WhiteSmoke;
             this.cbActionType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbActionType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbActionType.FormattingEnabled = true;
-            this.cbActionType.Location = new System.Drawing.Point(6, 20);
+            this.cbActionType.Location = new System.Drawing.Point(7, 20);
             this.cbActionType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbActionType.Name = "cbActionType";
             this.cbActionType.Size = new System.Drawing.Size(198, 26);
@@ -92,7 +91,7 @@ namespace TGMacro
             // 
             // txtSleepAmount
             // 
-            this.txtSleepAmount.Location = new System.Drawing.Point(0, 19);
+            this.txtSleepAmount.Location = new System.Drawing.Point(3, 20);
             this.txtSleepAmount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSleepAmount.Maximum = new decimal(new int[] {
             2147483647,
@@ -110,7 +109,6 @@ namespace TGMacro
             // 
             // cbKeyStatus
             // 
-            this.cbKeyStatus.BackColor = System.Drawing.Color.WhiteSmoke;
             this.cbKeyStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbKeyStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbKeyStatus.FormattingEnabled = true;
@@ -225,7 +223,7 @@ namespace TGMacro
             // lblWaitAmount
             // 
             this.lblWaitAmount.AutoSize = true;
-            this.lblWaitAmount.Location = new System.Drawing.Point(3, 0);
+            this.lblWaitAmount.Location = new System.Drawing.Point(0, 0);
             this.lblWaitAmount.Name = "lblWaitAmount";
             this.lblWaitAmount.Size = new System.Drawing.Size(135, 18);
             this.lblWaitAmount.TabIndex = 27;
@@ -366,11 +364,10 @@ namespace TGMacro
             // 
             // cbMouseMoveMethod
             // 
-            this.cbMouseMoveMethod.BackColor = System.Drawing.Color.WhiteSmoke;
             this.cbMouseMoveMethod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMouseMoveMethod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbMouseMoveMethod.FormattingEnabled = true;
-            this.cbMouseMoveMethod.Location = new System.Drawing.Point(6, 20);
+            this.cbMouseMoveMethod.Location = new System.Drawing.Point(7, 20);
             this.cbMouseMoveMethod.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbMouseMoveMethod.Name = "cbMouseMoveMethod";
             this.cbMouseMoveMethod.Size = new System.Drawing.Size(198, 26);
@@ -378,11 +375,12 @@ namespace TGMacro
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnSave.BackColor = System.Drawing.Color.Black;
             this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Image = global::TGMacro.Properties.Resources.save_32;
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.Location = new System.Drawing.Point(3, 406);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -426,7 +424,7 @@ namespace TGMacro
             // 
             // btnClose
             // 
-            this.btnClose.BackgroundImage = global::TGMacro.Properties.Resources.close_16;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnClose.FlatAppearance.BorderSize = 0;
@@ -461,7 +459,7 @@ namespace TGMacro
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(228, 411);
+            this.ClientSize = new System.Drawing.Size(228, 512);
             this.Controls.Add(this.pnlMain);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -521,7 +519,7 @@ namespace TGMacro
         private System.Windows.Forms.ComboBox cbMouseMoveMethod;
         private System.Windows.Forms.Panel pnlKeys;
         private System.Windows.Forms.Label lblKey;
-        private System.Windows.Forms.Button btnSave;
+        private CustomButton btnSave;
         private System.Windows.Forms.TextBox txtKeySetter;
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.ToolTip toolTip1;

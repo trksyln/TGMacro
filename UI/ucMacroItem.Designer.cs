@@ -30,24 +30,23 @@ namespace TGMacro
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucMacroItem));
             this.picTriggerType = new System.Windows.Forms.PictureBox();
             this.lblMacroName = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.picRunning = new System.Windows.Forms.PictureBox();
             this.pnlEnable = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.lblKeyInfo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picTriggerType)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picRunning)).BeginInit();
             this.SuspendLayout();
             // 
             // picTriggerType
             // 
             this.picTriggerType.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.picTriggerType.BackgroundImage = global::TGMacro.Properties.Resources.keyboard_16px;
+            this.picTriggerType.BackgroundImage = global::TGMacro.Properties.Resources.mouse_16px;
             this.picTriggerType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picTriggerType.Location = new System.Drawing.Point(24, 40);
+            this.picTriggerType.Location = new System.Drawing.Point(23, 42);
             this.picTriggerType.Name = "picTriggerType";
             this.picTriggerType.Size = new System.Drawing.Size(20, 20);
             this.picTriggerType.TabIndex = 0;
@@ -56,6 +55,7 @@ namespace TGMacro
             // lblMacroName
             // 
             this.lblMacroName.AutoEllipsis = true;
+            this.lblMacroName.BackColor = System.Drawing.Color.Gainsboro;
             this.lblMacroName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblMacroName.Location = new System.Drawing.Point(20, 0);
             this.lblMacroName.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
@@ -68,44 +68,34 @@ namespace TGMacro
             // btnDelete
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelete.BackgroundImage = global::TGMacro.Properties.Resources.del_16;
+            this.btnDelete.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnDelete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.BackgroundImage")));
             this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Location = new System.Drawing.Point(243, 3);
+            this.btnDelete.Location = new System.Drawing.Point(218, 3);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(20, 20);
             this.btnDelete.TabIndex = 15;
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             // 
             // btnEdit
             // 
             this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEdit.BackgroundImage = global::TGMacro.Properties.Resources.edit_16;
+            this.btnEdit.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnEdit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEdit.BackgroundImage")));
             this.btnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnEdit.FlatAppearance.BorderSize = 0;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Location = new System.Drawing.Point(217, 3);
+            this.btnEdit.Location = new System.Drawing.Point(244, 3);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(20, 20);
             this.btnEdit.TabIndex = 14;
-            this.btnEdit.UseVisualStyleBackColor = true;
-            // 
-            // picRunning
-            // 
-            this.picRunning.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picRunning.Image = global::TGMacro.Properties.Resources.run_16;
-            this.picRunning.Location = new System.Drawing.Point(191, 3);
-            this.picRunning.Name = "picRunning";
-            this.picRunning.Size = new System.Drawing.Size(20, 20);
-            this.picRunning.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picRunning.TabIndex = 16;
-            this.picRunning.TabStop = false;
-            this.picRunning.Visible = false;
+            this.btnEdit.UseVisualStyleBackColor = false;
             // 
             // pnlEnable
             // 
-            this.pnlEnable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.pnlEnable.BackColor = System.Drawing.SystemColors.Highlight;
             this.pnlEnable.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlEnable.Location = new System.Drawing.Point(0, 0);
             this.pnlEnable.Name = "pnlEnable";
@@ -115,7 +105,7 @@ namespace TGMacro
             // lblKeyInfo
             // 
             this.lblKeyInfo.AutoEllipsis = true;
-            this.lblKeyInfo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblKeyInfo.BackColor = System.Drawing.Color.White;
             this.lblKeyInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblKeyInfo.Location = new System.Drawing.Point(20, 40);
             this.lblKeyInfo.Margin = new System.Windows.Forms.Padding(3);
@@ -132,7 +122,6 @@ namespace TGMacro
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.picTriggerType);
-            this.Controls.Add(this.picRunning);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.lblMacroName);
@@ -142,7 +131,6 @@ namespace TGMacro
             this.Name = "ucMacroItem";
             this.Size = new System.Drawing.Size(267, 65);
             ((System.ComponentModel.ISupportInitialize)(this.picTriggerType)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picRunning)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -153,7 +141,6 @@ namespace TGMacro
         private System.Windows.Forms.Label lblMacroName;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.PictureBox picRunning;
         private System.Windows.Forms.Panel pnlEnable;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label lblKeyInfo;

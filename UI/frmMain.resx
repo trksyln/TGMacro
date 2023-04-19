@@ -117,25 +117,60 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnEnable.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAURJREFUWEft
+        lr9qwkAcxyNYuzpIR1/B1TFbyQNkyF8y5RmkWXyFPkmHDlHEScd2KwXfwF3dxPZ74QLHDy89yC+kYr7w
+        IXD5fu++XEhyVqdOVGmaPgRBkIVhuMH1gwMxF3ixbbsvl9ELgQz8NMRMLqMXTAsS4iSXy+gF04qEOFnJ
+        ZfQSJhLipHaBg+/7b7heyLgp9Qpg8bX0TMGnes+Q2jugTtDDqxVjbE88VbAWKJQkyRDjr+Cs+HTwFyiF
+        3Zjg/pb4Kc0VkPrrsTReoJDneSN4v0jWLC9MJKRiVCCKoid4v0nWLC9MJKRSOYHjOI94BHP4TiRnlC8k
+        TCSkop0A34hnsLuSUeEvEMfxGOPvxKeDr4DrugO53UfiqaJegf/wKT6AHLTzM2LgNgq0fiRr91BaHsvB
+        EojHwcESr6zZsbzTncmyfgH6SProJw5T5QAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="saveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>132, 17</value>
   </metadata>
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>268, 17</value>
   </metadata>
+  <data name="btnMin.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EAAACxABrSO9dQAAAChJREFUOE9jGAXDCvz//18YiJcQiYWh2hAAJIimCB/GNGAUDF3AwAAAbPZU1f3J
+        wzgAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnClose.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EAAACxABrSO9dQAAAHtJREFUOE/NkFsKgCAQRV1sQVgraQe10TFB6AozFfgYq4864MeM515Q8x82otkT
+        WR6LRCe6PJ5g2eMECBOvElSnJqhhISc2h4Vr4HZYQCB+VuCw+rkJrwoQev6EXKC5BFLH4sirA7WkFhaq
+        Jd65FRcDj0XgWLgLj59jzA6bouBEH+Ey8AAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="ctHelpMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>427, 17</value>
   </metadata>
   <metadata name="ctFileMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>567, 17</value>
   </metadata>
+  <data name="btnImportProject.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EAAACxABrSO9dQAAAL9JREFUOE9jGHhgaGh4Fxs2MjI6paurKwhVhhsAFf43NjZ2BNLGaHgZEG8AKmGE
+        qMQBgIr+Y7NJS0uLB+iS60D5Y0C8GxfGaQAI6OnpKQJdF4oNA/UlgPTiNcDCwoIThKFcFADSQ9AAoFwn
+        CEO5KIC2BgADbz5Q/D0Q/4Di9yAxqDQY4DUAGHhiJiYmSkC5GSAMYoPEoNJggNcAGADKURYGQGergDCU
+        iwJQDAA60RDkTBKxIcyAd5RgqIPIBQwMACrdh+hwS/E9AAAAAElFTkSuQmCC
+</value>
+  </data>
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>678, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>78</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAYAAAAAAAEAIADiLAAAZgAAAICAAAABACAAKAgBAEgtAABAQAAAAQAgAChCAABwNQEAMDAAAAEA

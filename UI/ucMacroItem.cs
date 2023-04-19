@@ -38,7 +38,7 @@ namespace TGMacro
             {
                 pnlEnable.BackColor = Color.FromArgb(230, 71, 30);
                 lblMacroName.ForeColor = Color.DarkRed;
-                picRunning.Visible = false;
+                /*picRunning.Visible = false;*/
             }
         }
         private void registerEvents()
@@ -83,7 +83,7 @@ namespace TGMacro
                 {
                     if (IsHandleCreated)
                     {
-                        Invoke((MethodInvoker)delegate { picRunning.Visible = Macro.Trigger.RunState != Enums.TriggerRunState.Stop; });
+                        /*Invoke((MethodInvoker)delegate { picRunning.Visible = Macro.Trigger.RunState != Enums.TriggerRunState.Stop; });*/
                     }
                 };
 
