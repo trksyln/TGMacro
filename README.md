@@ -1,5 +1,5 @@
 # TGM Gaming Macro
-[![tgmacro download](https://trksyln.net/tgmacro/content/images/dw-win.png)](https://trksyln.net/tgmacro)
+[![tgmacro download](https://trksyln.net/tgmacro/content/images/dw-wiN.png)](https://trksyln.net/tgmacro)
 &nbsp;
 ## Features
 ---
@@ -23,4 +23,4 @@
 | [Sourceforge](https://sourceforge.net/projects/tmacro/) | 
 
 
-`NOTE: To build you will need https://github.com/trksyln/CSInputs library.`
+`NOTE: To build you will need` [CSInputs](https://github.com/trksyln/CSInputs) `library.`
