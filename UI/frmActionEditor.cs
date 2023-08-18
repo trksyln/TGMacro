@@ -25,6 +25,7 @@ namespace TGMacro
             {
                 _isListeningForTriggerKey = value;
                 viewKeys();
+                cbActionType.Enabled= !value;
             }
         }
 
