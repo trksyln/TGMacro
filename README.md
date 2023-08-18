@@ -1,5 +1,5 @@
 # TGM Gaming Macro
-[![tgmacro download](https://trksyln.net/tgmacro/content/images/dw-wiN.png)](https://trksyln.net/tgmacro)
+[![tgmacro download](https://trksyln.net/content/images/dw-wiN.png)](https://trksyln.net/tgmacro)
 &nbsp;
 ## Features
 ---
@@ -15,7 +15,7 @@
 - Free. No Ads.
 - Open Source
  
-[![tgmacro](https://trksyln.net/tgmacro/content/images/tgmacro0.png)](https://trksyln.net/tgmacro)
+[![tgmacro](https://trksyln.net/content/images/tgmacro0.png)](https://trksyln.net/tgmacro)
 | Check TGM On:    |
 | -------- | 
 | [trksyln.net](https://trksyln.net/tgmacro)  | 
