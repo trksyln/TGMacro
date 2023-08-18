@@ -1,5 +1,7 @@
 # TGM Gaming Macro
-[![tgmacro download](https://github.com/trksyln/TGMacro/assets/5625394/89cc332c-ca98-4bd2-8008-74d83b5e5f77)](https://trksyln.net/tgmacro)
+
+
+[![tgmacro download](https://github-production-user-asset-6210df.s3.amazonaws.com/5625394/261521266-588eb27f-8d68-410e-bd67-082c2b85b4cc.png)](https://trksyln.net/tgmacro)
 &nbsp;
 ## Features
 ---
@@ -15,7 +17,7 @@
 - Free. No Ads.
 - Open Source
 
-[![tgmacro](https://github.com/trksyln/TGMacro/assets/5625394/07b7ee78-746d-4621-98a3-f26c25e925e1)](https://trksyln.net/tgmacro)
+[![tgmacro](https://github-production-user-asset-6210df.s3.amazonaws.com/5625394/261519956-07b7ee78-746d-4621-98a3-f26c25e925e1.png)](https://trksyln.net/tgmacro)
 | Check TGM On:    |
 | -------- | 
 | [trksyln.net](https://trksyln.net/tgmacro)  | 
