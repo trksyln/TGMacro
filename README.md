@@ -21,7 +21,6 @@
 | Check TGM On:    |
 | -------- | 
 | [trksyln.net](https://trksyln.net/tgmacro)  | 
-| [Softpedia](https://www.softpedia.com/get/Gaming-Related/TGM-Gaming-Macro.shtml)  | 
 | [Sourceforge](https://sourceforge.net/projects/tmacro/) | 
 
 
