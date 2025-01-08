@@ -59,7 +59,7 @@ namespace TGMacro
             this.btnClear = new System.Windows.Forms.Button();
             this.btnImportScript = new System.Windows.Forms.Button();
             this.btnClone = new System.Windows.Forms.Button();
-            this.dtActions = new DatagridDoubleBuffer();
+            this.dtActions = new TGMacro.UI.DatagridDoubleBuffer();
             this.btnDeleteAction = new System.Windows.Forms.Button();
             this.btnEditAction = new System.Windows.Forms.Button();
             this.btnActionMoveUp = new System.Windows.Forms.Button();

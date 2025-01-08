@@ -716,8 +716,15 @@ namespace TGMacro
                 progressBar1.Value = 0;
                 progressBar1.Visible = true;
             });
+
+            int previousForIndex = -1;
             for (int i = 0; i < acts.Length; i++)
             {
+                if (acts[i].ActionType == Enums.ActionTypes.For)
+                    previousForIndex = i;
+                else if (acts[i].ActionType == Enums.ActionTypes.Loop && previousForIndex != -1)
+                    i = previousForIndex;
+                else
                 acts[i].DoJob();
                 progressBar1.Invoke((MethodInvoker)delegate
                 {

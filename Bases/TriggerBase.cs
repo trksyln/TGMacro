@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
+using TGMacro.Actions;
 using TGMacro.Interfaces;
 
 namespace TGMacro.Bases
@@ -37,7 +39,8 @@ namespace TGMacro.Bases
             get => _isEnable;
             set
             {
-                _isEnable = value; if (!value)
+                _isEnable = value;
+                if (!value)
                 {
                     RunState = Enums.TriggerRunState.Stop;
                 }
@@ -60,17 +63,19 @@ namespace TGMacro.Bases
             };
             triggerThread.Start();
         }
+
         public void Start()
         {
             if (triggerThread != null && triggerThread.IsAlive)
             {
-                Restart();
+                Stop();
             }
             else
             {
                 InitiateThread();
             }
         }
+
         public void Stop()
         {
             if (TriggerRunningStatusChanged != null)
@@ -86,30 +91,64 @@ namespace TGMacro.Bases
                 triggerThread.Abort();
             }
         }
+
         public void Restart()
         {
             Stop();
             InitiateThread();
         }
+
         public void Watch()
         {
             while (true)
             {
                 SpinWait.SpinUntil(() => IsEnable && Actions.Count > 0 && Statics.AppSession.Enable && RunState != Enums.TriggerRunState.Stop);
+
+                int previousForIndex = -1;
+                int forLoopCount = 999999;
                 for (int i = 0; i < Actions.Count; i++)
                 {
-                    Actions[i].DoJob();
+                    if (Actions[i].ActionType == Enums.ActionTypes.For)
+                    {
+                        forLoopCount = ((ForAction)Actions[i]).LoopCount;
+                        previousForIndex = i;
+                    }
+                    else if (Actions[i].ActionType == Enums.ActionTypes.Loop && previousForIndex != -1)
+                    {
+                        forLoopCount--;
+                        if (forLoopCount == 0)
+                            continue;
+                        i = previousForIndex;
+                    }
+                    else
+                    {
+                        Actions[i].DoJob();
+                    }
+
                     if (RunState == Enums.TriggerRunState.Stop)
                     {
+                        var downActions = Actions
+                            .Where(m => m.ActionType == Enums.ActionTypes.KeyboardKey)
+                            .Where(m => ((KeyboardKeyAction)m).KeyMethod == Enums.KeyPressMethods.Down);
+                        foreach (KeyboardKeyAction action in downActions)
+                        {
+                            var upAction = new KeyboardKeyAction()
+                            {
+                                KeyboardKey = action.KeyboardKey,
+                                KeyMethod = Enums.KeyPressMethods.Up
+                            };
+                            upAction.DoJob();
+                        }
                         break;
                     }
                 }
+
                 if (RunState != Enums.TriggerRunState.Run)
                 {
                     RunState = Enums.TriggerRunState.Stop;
                 }
 
-                Thread.Sleep(1);
+                Thread.Sleep(10);
             }
         }
 

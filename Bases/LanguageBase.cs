@@ -108,6 +108,8 @@
         public virtual string text_action_type_03_keyboard_button { get; set; }
         public virtual string text_action_type_04_wait { get; set; }
         public virtual string text_action_type_05_text { get; set; }
+        public virtual string text_action_type_06_for { get; set; }
+        public virtual string text_action_type_07_loop { get; set; }
 
         public virtual string error_saving_project { get; set; }
         public virtual string error_loding_project { get; set; }

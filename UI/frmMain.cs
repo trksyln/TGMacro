@@ -422,14 +422,8 @@ namespace TGMacro
 
         private void SaveProjectFile(TGMacroProject obj, string path)
         {
-            if (File.Exists(path))
-                try
-                {
-                    File.Delete(path);
-                }
-                catch { }
             DataContractJsonSerializer xs = new DataContractJsonSerializer(obj.GetType());
-            using (FileStream tw = new FileStream(path, FileMode.OpenOrCreate))
+            using (FileStream tw = new FileStream(path, FileMode.Create))
             {
                 xs.WriteObject(tw, obj);
             }

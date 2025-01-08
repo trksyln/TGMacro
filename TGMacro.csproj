@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>TGMacro</RootNamespace>
     <AssemblyName>TGMacro</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>false</Deterministic>
     <TargetFrameworkProfile />
@@ -121,8 +121,11 @@
     <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CSInputs">
-      <HintPath>.\CSInputs.dll</HintPath>
+    <Reference Include="CSInputs, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\CSInputs.1.0.4\lib\net48\CSInputs.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -138,6 +141,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actions\ForAction.cs" />
+    <Compile Include="Actions\LoopAction.cs" />
     <Compile Include="Actions\TextAction.cs" />
     <Compile Include="Actions\KeyboardKeyAction.cs" />
     <Compile Include="Actions\MouseKeyAction.cs" />
@@ -239,7 +244,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="app.config" />
     <None Include="app.manifest" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
