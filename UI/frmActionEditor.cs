@@ -57,6 +57,7 @@ namespace TGMacro
             cbActionType.Items.Add(Statics.AppSession.ActiveLanguage.text_action_type_05_text);
             cbActionType.Items.Add(Statics.AppSession.ActiveLanguage.text_action_type_06_for);
             cbActionType.Items.Add(Statics.AppSession.ActiveLanguage.text_action_type_07_loop);
+            cbActionType.Items.Add(Statics.AppSession.ActiveLanguage.text_action_type_08_comment);
             cbActionType.SelectedIndex = 0;
             lblGrabCurInfo.Text = Statics.AppSession.ActiveLanguage.text_grab_cursor_position;
             toolTip1.SetToolTip(cbMouseMoveMethod, Statics.AppSession.ActiveLanguage.text_mouse_move_method_info);
@@ -153,6 +154,10 @@ namespace TGMacro
                 case Enums.ActionTypes.Loop:
                     cbActionType.SelectedIndex = (int)Enums.ActionTypes.Loop;
                     break;
+                case Enums.ActionTypes.Comment:
+                    cbActionType.SelectedIndex = (int)Enums.ActionTypes.Comment;
+                    txtText.Text = (Action as Actions.CommentAction).Text;
+                    break;
             }
         }
 
@@ -240,6 +245,15 @@ namespace TGMacro
                     case (int)Enums.ActionTypes.Loop:
                         Action = new Actions.LoopAction();
                         break;
+                    case (int)Enums.ActionTypes.Comment:
+                        if (txtText.TextLength < 1)
+                        {
+                            MessageBox.Show(Statics.AppSession.ActiveLanguage.info_no_text, "Err");
+                            return;
+                        }
+                        Action = new Actions.CommentAction();
+                        (Action as Actions.CommentAction).Text = txtText.Text;
+                        break;
                 }
                 DialogResult = DialogResult.OK;
             };
@@ -263,6 +277,7 @@ namespace TGMacro
                         setPresetWait();
                         break;
                     case (int)Enums.ActionTypes.Text:
+                    case (int)Enums.ActionTypes.Comment:
                         setPresetText();
                         break;
                     case (int)Enums.ActionTypes.For:

@@ -9,5 +9,6 @@
         Text = 4,
         For = 5,
         Loop = 6,
+        Comment = 7
     }
 }

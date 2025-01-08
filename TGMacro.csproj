@@ -141,6 +141,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actions\CommentAction.cs" />
     <Compile Include="Actions\ForAction.cs" />
     <Compile Include="Actions\LoopAction.cs" />
     <Compile Include="Actions\TextAction.cs" />

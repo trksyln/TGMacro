@@ -9,6 +9,7 @@ using System.Drawing;
 using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
+using TGMacro.Actions;
 
 namespace TGMacro
 {
@@ -718,14 +719,26 @@ namespace TGMacro
             });
 
             int previousForIndex = -1;
+            int forLoopCount = 999999;
             for (int i = 0; i < acts.Length; i++)
             {
                 if (acts[i].ActionType == Enums.ActionTypes.For)
+                {
+                    forLoopCount = ((ForAction)acts[i]).LoopCount;
                     previousForIndex = i;
+                }
                 else if (acts[i].ActionType == Enums.ActionTypes.Loop && previousForIndex != -1)
+                {
+                    forLoopCount--;
+                    if (forLoopCount == 0)
+                        continue;
                     i = previousForIndex;
+                }
                 else
+                {
                 acts[i].DoJob();
+                }
+
                 progressBar1.Invoke((MethodInvoker)delegate
                 {
                     progressBar1.Value = i;

@@ -151,6 +151,10 @@ namespace TGMacro.ProjectData
                 case Enums.ActionTypes.Loop:
                     ActionType = (act as Actions.LoopAction).ActionType;
                     break;
+                case Enums.ActionTypes.Comment:
+                    ActionType = (act as Actions.CommentAction).ActionType;
+                    Text = (act as Actions.CommentAction).Text;
+                    break;
             }
         }
 
@@ -208,6 +212,13 @@ namespace TGMacro.ProjectData
                 case Enums.ActionTypes.Loop:
                     {
                         return new Actions.LoopAction();
+                    }
+                case Enums.ActionTypes.Comment:
+                    {
+                        return new Actions.CommentAction()
+                        {
+                            Text = Text ?? default
+                        };
                     }
             }
             return new Actions.WaitAction();

@@ -110,6 +110,7 @@
         public virtual string text_action_type_05_text { get; set; }
         public virtual string text_action_type_06_for { get; set; }
         public virtual string text_action_type_07_loop { get; set; }
+        public virtual string text_action_type_08_comment { get; set; }
 
         public virtual string error_saving_project { get; set; }
         public virtual string error_loding_project { get; set; }

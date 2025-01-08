@@ -57,15 +57,15 @@ namespace TGMacro
             this.pnlMouseMoveMethod = new System.Windows.Forms.Panel();
             this.lblPositioning = new System.Windows.Forms.Label();
             this.cbMouseMoveMethod = new System.Windows.Forms.ComboBox();
+            this.pnlForLoopCount = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtForLoopCount = new System.Windows.Forms.NumericUpDown();
+            this.btnSave = new System.Windows.Forms.Button();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlTop = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.pnlForLoopCount = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtForLoopCount = new System.Windows.Forms.NumericUpDown();
-            this.btnSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.txtSleepAmount)).BeginInit();
             this.pnlMousePos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mPosY)).BeginInit();
@@ -77,10 +77,10 @@ namespace TGMacro
             this.pnlText.SuspendLayout();
             this.pnlKeys.SuspendLayout();
             this.pnlMouseMoveMethod.SuspendLayout();
-            this.pnlMain.SuspendLayout();
-            this.pnlTop.SuspendLayout();
             this.pnlForLoopCount.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtForLoopCount)).BeginInit();
+            this.pnlMain.SuspendLayout();
+            this.pnlTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // cbActionType
@@ -379,6 +379,62 @@ namespace TGMacro
             this.cbMouseMoveMethod.Size = new System.Drawing.Size(198, 25);
             this.cbMouseMoveMethod.TabIndex = 24;
             // 
+            // pnlForLoopCount
+            // 
+            this.pnlForLoopCount.Controls.Add(this.label2);
+            this.pnlForLoopCount.Controls.Add(this.txtForLoopCount);
+            this.pnlForLoopCount.Location = new System.Drawing.Point(0, 404);
+            this.pnlForLoopCount.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlForLoopCount.Name = "pnlForLoopCount";
+            this.pnlForLoopCount.Size = new System.Drawing.Size(210, 50);
+            this.pnlForLoopCount.TabIndex = 35;
+            this.pnlForLoopCount.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(76, 17);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "Loop count";
+            // 
+            // txtForLoopCount
+            // 
+            this.txtForLoopCount.Location = new System.Drawing.Point(0, 19);
+            this.txtForLoopCount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtForLoopCount.Maximum = new decimal(new int[] {
+            2147483647,
+            0,
+            0,
+            0});
+            this.txtForLoopCount.Name = "txtForLoopCount";
+            this.txtForLoopCount.Size = new System.Drawing.Size(93, 22);
+            this.txtForLoopCount.TabIndex = 23;
+            this.txtForLoopCount.Value = new decimal(new int[] {
+            40,
+            0,
+            0,
+            0});
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Image = global::TGMacro.Properties.Resources.save_32;
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(3, 456);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(206, 41);
+            this.btnSave.TabIndex = 36;
+            this.btnSave.Text = "Save";
+            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnSave.UseVisualStyleBackColor = false;
+            // 
             // pnlMain
             // 
             this.pnlMain.AutoSize = true;
@@ -439,62 +495,6 @@ namespace TGMacro
             this.lblTitle.Text = "Action Editor";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pnlForLoopCount
-            // 
-            this.pnlForLoopCount.Controls.Add(this.label2);
-            this.pnlForLoopCount.Controls.Add(this.txtForLoopCount);
-            this.pnlForLoopCount.Location = new System.Drawing.Point(0, 404);
-            this.pnlForLoopCount.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlForLoopCount.Name = "pnlForLoopCount";
-            this.pnlForLoopCount.Size = new System.Drawing.Size(210, 50);
-            this.pnlForLoopCount.TabIndex = 35;
-            this.pnlForLoopCount.Visible = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 17);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "Loop count";
-            // 
-            // txtForLoopCount
-            // 
-            this.txtForLoopCount.Location = new System.Drawing.Point(0, 19);
-            this.txtForLoopCount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtForLoopCount.Maximum = new decimal(new int[] {
-            2147483647,
-            0,
-            0,
-            0});
-            this.txtForLoopCount.Name = "txtForLoopCount";
-            this.txtForLoopCount.Size = new System.Drawing.Size(93, 22);
-            this.txtForLoopCount.TabIndex = 23;
-            this.txtForLoopCount.Value = new decimal(new int[] {
-            40,
-            0,
-            0,
-            0});
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Image = global::TGMacro.Properties.Resources.save_32;
-            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(3, 456);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(206, 41);
-            this.btnSave.TabIndex = 36;
-            this.btnSave.Text = "Save";
-            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnSave.UseVisualStyleBackColor = false;
-            // 
             // frmActionEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -529,13 +529,13 @@ namespace TGMacro
             this.pnlKeys.PerformLayout();
             this.pnlMouseMoveMethod.ResumeLayout(false);
             this.pnlMouseMoveMethod.PerformLayout();
+            this.pnlForLoopCount.ResumeLayout(false);
+            this.pnlForLoopCount.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtForLoopCount)).EndInit();
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
-            this.pnlForLoopCount.ResumeLayout(false);
-            this.pnlForLoopCount.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtForLoopCount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
