@@ -9,3 +9,6 @@
 /bin/Debug
 /bin/Release
 *.user
+.vscode/launch.json
+.vscode/settings.json
+packages
