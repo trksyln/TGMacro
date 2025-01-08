@@ -7,5 +7,7 @@
         KeyboardKey = 2,
         Wait = 3,
         Text = 4,
+        For = 5,
+        Loop = 6,
     }
 }

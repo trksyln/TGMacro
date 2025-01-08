@@ -194,5 +194,8 @@
         public override string edit_macro => "Edit Macro";
 
         public override string enable_disable_macro => "Enable/Disable Macro";
+
+        public override string text_action_type_06_for => "For";
+        public override string text_action_type_07_loop => "Loop";
     }
 }

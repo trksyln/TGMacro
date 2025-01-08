@@ -27,11 +27,11 @@ namespace TGMacro.Actions
             }
             else if (KeyMethod == Enums.KeyPressMethods.Down)
             {
-                CSInputs.SendInput.Mouse.Send(MouseKey, CSInputs.Enums.KeyFlags.Down, mousePos, MouseMoveMethod);
+                CSInputs.SendInput.Mouse.Send(MouseKey, CSInputs.Enums.KeyFlags.KeyDown, mousePos, MouseMoveMethod);
             }
             else
             {
-                CSInputs.SendInput.Mouse.Send(MouseKey, CSInputs.Enums.KeyFlags.Up, mousePos, MouseMoveMethod);
+                CSInputs.SendInput.Mouse.Send(MouseKey, CSInputs.Enums.KeyFlags.KeyUp, mousePos, MouseMoveMethod);
             }
         }
     }

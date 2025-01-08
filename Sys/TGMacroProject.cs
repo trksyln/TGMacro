@@ -113,6 +113,7 @@ namespace TGMacro.ProjectData
         [DataMember(EmitDefaultValue = false)] public Point? PixelPosition { get; set; }
         [DataMember(EmitDefaultValue = false)] public int? WaitFor { get; set; }
         [DataMember(EmitDefaultValue = false)] public string Text { get; set; }
+        [DataMember(EmitDefaultValue = false)] public int? LoopForCount { get; set; }
 
         public Action(IMacroAction act)
         {
@@ -142,6 +143,13 @@ namespace TGMacro.ProjectData
                 case Enums.ActionTypes.Text:
                     ActionType = (act as Actions.TextAction).ActionType;
                     Text = (act as Actions.TextAction).Text;
+                    break;
+                case Enums.ActionTypes.For:
+                    ActionType = (act as Actions.ForAction).ActionType;
+                    LoopForCount = (act as Actions.ForAction).LoopCount;
+                    break;
+                case Enums.ActionTypes.Loop:
+                    ActionType = (act as Actions.LoopAction).ActionType;
                     break;
             }
         }
@@ -189,6 +197,17 @@ namespace TGMacro.ProjectData
                         {
                             Text = Text ?? default
                         };
+                    }
+                case Enums.ActionTypes.For:
+                    {
+                        return new Actions.ForAction()
+                        {
+                            LoopCount = LoopForCount ?? 0
+                        };
+                    }
+                case Enums.ActionTypes.Loop:
+                    {
+                        return new Actions.LoopAction();
                     }
             }
             return new Actions.WaitAction();

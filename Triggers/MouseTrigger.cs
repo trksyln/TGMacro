@@ -27,24 +27,24 @@ namespace TGMacro.Triggers
             }
             bool defaultCon = (HasPrimary && Statics.SharedMethods.getPrimaryKeyStatus(PrimaryKey, modifierKey) || !HasPrimary) && data.Key == SecondaryKey;
 
-            if (defaultCon && Method == Enums.TriggerKeyMethods.Press && data.Flags == CSInputs.Enums.KeyFlags.Down)
+            if (defaultCon && Method == Enums.TriggerKeyMethods.Press && data.Flags == CSInputs.Enums.KeyFlags.KeyDown)
             {
                 base.RunState = Enums.TriggerRunState.RunOnce;
             }
 
             // Method Hold
-            if (defaultCon && Method == Enums.TriggerKeyMethods.Hold && data.Flags == CSInputs.Enums.KeyFlags.Down)
+            if (defaultCon && Method == Enums.TriggerKeyMethods.Hold && data.Flags == CSInputs.Enums.KeyFlags.KeyDown)
             {
                 base.RunState = Enums.TriggerRunState.Run;
             }
 
-            if (defaultCon && Method == Enums.TriggerKeyMethods.Hold && data.Flags == CSInputs.Enums.KeyFlags.Up)
+            if (defaultCon && Method == Enums.TriggerKeyMethods.Hold && data.Flags == CSInputs.Enums.KeyFlags.KeyUp)
             {
                 base.RunState = Enums.TriggerRunState.Stop;
             }
 
             // Method Toggle
-            if (defaultCon && Method == Enums.TriggerKeyMethods.Toggle && data.Flags == CSInputs.Enums.KeyFlags.Down)
+            if (defaultCon && Method == Enums.TriggerKeyMethods.Toggle && data.Flags == CSInputs.Enums.KeyFlags.KeyDown)
             {
                 if (base.RunState == Enums.TriggerRunState.Run)
                 {

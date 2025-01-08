@@ -25,7 +25,7 @@ namespace TGMacro
             {
                 _isListeningForTriggerKey = value;
                 viewKeys();
-                cbActionType.Enabled= !value;
+                cbActionType.Enabled = !value;
             }
         }
 
@@ -55,6 +55,8 @@ namespace TGMacro
             cbActionType.Items.Add(Statics.AppSession.ActiveLanguage.text_action_type_03_keyboard_button);
             cbActionType.Items.Add(Statics.AppSession.ActiveLanguage.text_action_type_04_wait);
             cbActionType.Items.Add(Statics.AppSession.ActiveLanguage.text_action_type_05_text);
+            cbActionType.Items.Add(Statics.AppSession.ActiveLanguage.text_action_type_06_for);
+            cbActionType.Items.Add(Statics.AppSession.ActiveLanguage.text_action_type_07_loop);
             cbActionType.SelectedIndex = 0;
             lblGrabCurInfo.Text = Statics.AppSession.ActiveLanguage.text_grab_cursor_position;
             toolTip1.SetToolTip(cbMouseMoveMethod, Statics.AppSession.ActiveLanguage.text_mouse_move_method_info);
@@ -84,6 +86,7 @@ namespace TGMacro
 
             txtKeySetter.Enabled = true;
         }
+
         public frmActionEditor(Interfaces.IMacroAction action = null)
         {
             InitializeComponent();
@@ -142,6 +145,13 @@ namespace TGMacro
                 case Enums.ActionTypes.Text:
                     cbActionType.SelectedIndex = (int)Enums.ActionTypes.Text;
                     txtText.Text = (Action as Actions.TextAction).Text;
+                    break;
+                case Enums.ActionTypes.For:
+                    cbActionType.SelectedIndex = (int)Enums.ActionTypes.For;
+                    txtForLoopCount.Value = (Action as Actions.ForAction).LoopCount;
+                    break;
+                case Enums.ActionTypes.Loop:
+                    cbActionType.SelectedIndex = (int)Enums.ActionTypes.Loop;
                     break;
             }
         }
@@ -223,6 +233,13 @@ namespace TGMacro
                         Action = new Actions.TextAction();
                         (Action as Actions.TextAction).Text = txtText.Text;
                         break;
+                    case (int)Enums.ActionTypes.For:
+                        Action = new Actions.ForAction();
+                        (Action as Actions.ForAction).LoopCount = (int)txtForLoopCount.Value;
+                        break;
+                    case (int)Enums.ActionTypes.Loop:
+                        Action = new Actions.LoopAction();
+                        break;
                 }
                 DialogResult = DialogResult.OK;
             };
@@ -248,13 +265,19 @@ namespace TGMacro
                     case (int)Enums.ActionTypes.Text:
                         setPresetText();
                         break;
+                    case (int)Enums.ActionTypes.For:
+                        setPresetFor();
+                        break;
+                    case (int)Enums.ActionTypes.Loop:
+                        reset();
+                        break;
                 }
             };
         }
 
         private void InputListener_MouseInputs(MouseData data, ref ModifierKey modifierKey)
         {
-            if (IsListeningForKey && (Enums.ActionTypes)cbActionType.SelectedIndex == Enums.ActionTypes.MouseButton && data.Flags == CSInputs.Enums.KeyFlags.Up)
+            if (IsListeningForKey && (Enums.ActionTypes)cbActionType.SelectedIndex == Enums.ActionTypes.MouseButton && data.Flags == CSInputs.Enums.KeyFlags.KeyUp)
             {
                 SecondaryMouseKey = data.Key;
                 IsListeningForKey = false;
@@ -262,7 +285,7 @@ namespace TGMacro
         }
         private void Hook_KeyboardInputs(KeyboardData data, ref ModifierKey modifierKey)
         {
-            if (modifierKey.Alt && data.Key == CSInputs.Enums.KeyboardKeys.X && data.Flags == CSInputs.Enums.KeyFlags.Down)
+            if (modifierKey.Alt && data.Key == CSInputs.Enums.KeyboardKeys.X && data.Flags == CSInputs.Enums.KeyFlags.KeyDown)
             {
                 mPosX.Value = Cursor.Position.X;
                 mPosY.Value = Cursor.Position.Y;
@@ -301,6 +324,7 @@ namespace TGMacro
             pnlMouseMoveMethod.Visible = false;
             pnlMousePos.Visible = false;
             pnlSleepAmount.Visible = false;
+            pnlForLoopCount.Visible = false;
             pnlText.Visible = false;
         }
 
@@ -332,11 +356,17 @@ namespace TGMacro
             reset();
             pnlSleepAmount.Visible = true;
         }
+
         private void setPresetText()
         {
             reset();
             pnlText.Visible = true;
         }
 
+        private void setPresetFor()
+        {
+            reset();
+            pnlForLoopCount.Visible = true;
+        }
     }
 }

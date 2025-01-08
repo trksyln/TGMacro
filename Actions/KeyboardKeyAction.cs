@@ -24,11 +24,11 @@ namespace TGMacro.Actions
             }
             else if (KeyMethod == Enums.KeyPressMethods.Down)
             {
-                CSInputs.SendInput.Keyboard.Send(KeyboardKey, CSInputs.Enums.KeyFlags.Down);
+                CSInputs.SendInput.Keyboard.Send(KeyboardKey, CSInputs.Enums.KeyFlags.KeyDown);
             }
             else
             {
-                CSInputs.SendInput.Keyboard.Send(KeyboardKey, CSInputs.Enums.KeyFlags.Up);
+                CSInputs.SendInput.Keyboard.Send(KeyboardKey, CSInputs.Enums.KeyFlags.KeyUp);
             }
         }
     }

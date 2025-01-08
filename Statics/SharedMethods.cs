@@ -42,7 +42,7 @@ namespace TGMacro.Statics
                 case CSInputs.Enums.KeyboardKeys.Alt:
                     return modifierKey.Alt;
                 case CSInputs.Enums.KeyboardKeys.Shift:
-                    return modifierKey.Shift;
+                    return modifierKey.LeftShift;
                 default:
                     return false;
             }
