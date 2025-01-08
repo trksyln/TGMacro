@@ -210,7 +210,7 @@ namespace TGMacro
 
             Statics.AppSession.InputListener.KeyboardInputs += KeyboardInputs;
             Statics.AppSession.InputListener.MouseInputs += MouseInputs;
-            Statics.AppSession.InputListener.MouseMovements += MouseMovements;
+            //Statics.AppSession.InputListener.MouseMovements += MouseMovements;
 
         }
 
