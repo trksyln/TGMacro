@@ -23,9 +23,9 @@
 
         public override string info_no_macro => "No macro to show.\r\nClick \"Add New Macro\" to create one";
 
-        public override string btnEnable_off => "Enable {HOME}";
+        public override string btnEnable_off => "Enable";
 
-        public override string btnEnable_on => "Disable {HOME}";
+        public override string btnEnable_on => "Disable";
 
         public override string btnAdd => "Add New Macro";
 
@@ -194,5 +194,9 @@
         public override string edit_macro => "Edit Macro";
 
         public override string enable_disable_macro => "Enable/Disable Macro";
+
+        public override string text_action_type_06_for => "For";
+        public override string text_action_type_07_loop => "Loop";
+        public override string text_action_type_08_comment => "Comment";
     }
 }

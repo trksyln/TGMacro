@@ -23,9 +23,9 @@
 
         public override string info_no_macro => "Gösterilecek makro yok.\r\n\"Yeni makro ekle\" ye tıklayıp oluşturun.";
 
-        public override string btnEnable_off => "Etkinleştir {HOME}";
+        public override string btnEnable_off => "Etkinleştir";
 
-        public override string btnEnable_on => "Etkisizleştir  {HOME}";
+        public override string btnEnable_on => "Etkisizleştir";
 
         public override string btnAdd => "Yeni Makro Ekle";
 

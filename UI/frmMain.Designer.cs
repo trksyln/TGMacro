@@ -106,7 +106,7 @@ namespace TGMacro
             this.btnEnable.Name = "btnEnable";
             this.btnEnable.Size = new System.Drawing.Size(193, 41);
             this.btnEnable.TabIndex = 15;
-            this.btnEnable.Text = "Enable {HOME}";
+            this.btnEnable.Text = "Enable";
             this.btnEnable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEnable.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEnable.UseVisualStyleBackColor = false;
